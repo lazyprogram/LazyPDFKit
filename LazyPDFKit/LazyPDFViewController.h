@@ -26,9 +26,6 @@
 #import <UIKit/UIKit.h>
 
 #import "LazyPDFDocument.h"
-#import "LazyPDFMainToolbar.h"
-#import "LazyPDFMainPagebar.h"
-
 
 
 @class LazyPDFViewController;
@@ -45,31 +42,7 @@
 
 @interface LazyPDFViewController : UIViewController
 {
-    LazyPDFDocument *document;
     
-    UIScrollView *theScrollView;
-    
-    LazyPDFMainToolbar *mainToolbar;
-    
-    LazyPDFMainPagebar *mainPagebar;
-    
-    NSMutableDictionary *contentViews;
-    
-    UIUserInterfaceIdiom userInterfaceIdiom;
-    
-    NSInteger currentPage, minimumPage, maximumPage;
-    
-    UIDocumentInteractionController *documentInteraction;
-    
-    UIPrintInteractionController *printInteraction;
-    
-    CGFloat scrollViewOutset;
-    
-    CGSize lastAppearSize;
-    
-    NSDate *lastHideTime;
-    
-    BOOL ignoreDidScroll;
 }
 @property (nonatomic, strong) LazyPDFDrawingView *drawingView;
 @property (nonatomic , strong) UIColor *lineColor;

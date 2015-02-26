@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90E68E671A9F1E2E00A13700 /* LazyPDFDrawToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 90E68E651A9F1E2E00A13700 /* LazyPDFDrawToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90E68E681A9F1E2E00A13700 /* LazyPDFDrawToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E68E661A9F1E2E00A13700 /* LazyPDFDrawToolbar.m */; };
 		90ED25851A9F0FC300863062 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED25841A9F0FC300863062 /* main.m */; };
 		90ED25881A9F0FC300863062 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED25871A9F0FC300863062 /* AppDelegate.m */; };
 		90ED258B1A9F0FC300863062 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED258A1A9F0FC300863062 /* ViewController.m */; };
@@ -189,6 +191,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		90E68E651A9F1E2E00A13700 /* LazyPDFDrawToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFDrawToolbar.h; sourceTree = "<group>"; };
+		90E68E661A9F1E2E00A13700 /* LazyPDFDrawToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFDrawToolbar.m; sourceTree = "<group>"; };
 		90ED257F1A9F0FC300863062 /* LazyPDFKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPDFKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90ED25831A9F0FC300863062 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90ED25841A9F0FC300863062 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -471,6 +475,8 @@
 				90ED25EF1A9F103800863062 /* LazyPDFMainPagebar.m */,
 				90ED25F01A9F103800863062 /* LazyPDFMainToolbar.h */,
 				90ED25F11A9F103800863062 /* LazyPDFMainToolbar.m */,
+				90E68E651A9F1E2E00A13700 /* LazyPDFDrawToolbar.h */,
+				90E68E661A9F1E2E00A13700 /* LazyPDFDrawToolbar.m */,
 				90ED25F21A9F103800863062 /* LazyPDFPopoverController.h */,
 				90ED25F31A9F103800863062 /* LazyPDFPopoverController.m */,
 				90ED25F41A9F103800863062 /* LazyPDFPopoverView.h */,
@@ -620,6 +626,7 @@
 				90ED261A1A9F103800863062 /* LazyPDFColorPicker.h in Headers */,
 				90ED26381A9F103800863062 /* LazyPDFPopoverController.h in Headers */,
 				90ED263A1A9F103800863062 /* LazyPDFPopoverView.h in Headers */,
+				90E68E671A9F1E2E00A13700 /* LazyPDFDrawToolbar.h in Headers */,
 				90ED26501A9F103800863062 /* LazyPDFViewController.h in Headers */,
 				90ED26421A9F103800863062 /* LazyPDFThumbFetch.h in Headers */,
 				90ED26181A9F103800863062 /* LazyPDFColorIndicatorView.h in Headers */,
@@ -897,6 +904,7 @@
 				90ED26331A9F103800863062 /* LazyPDFHSBSupport.m in Sources */,
 				90ED26231A9F103800863062 /* LazyPDFConstants.m in Sources */,
 				90ED263F1A9F103800863062 /* LazyPDFSourceColorView.m in Sources */,
+				90E68E681A9F1E2E00A13700 /* LazyPDFDrawToolbar.m in Sources */,
 				90ED26371A9F103800863062 /* LazyPDFMainToolbar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1177,6 +1185,7 @@
 				90ED25A41A9F0FC300863062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90ED25A51A9F0FC300863062 /* Build configuration list for PBXNativeTarget "LazyPDFKitDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -1185,6 +1194,7 @@
 				90ED25A71A9F0FC300863062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90ED25C61A9F0FF300863062 /* Build configuration list for PBXNativeTarget "LazyPDFKit" */ = {
 			isa = XCConfigurationList;
@@ -1193,6 +1203,7 @@
 				90ED25C81A9F0FF300863062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90ED25CA1A9F0FF300863062 /* Build configuration list for PBXNativeTarget "LazyPDFKitTests" */ = {
 			isa = XCConfigurationList;
@@ -1201,6 +1212,7 @@
 				90ED25CC1A9F0FF300863062 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

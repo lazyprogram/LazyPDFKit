@@ -37,10 +37,13 @@
 #import "LazyPDFColorPickerController.h"
 #import "LazyPDFContentView.h"
 #import "LazyPDFContentPage.h"
+#import "LazyPDFMainToolbar.h"
+#import "LazyPDFMainPagebar.h"
+#import "LazyPDFDrawToolbar.h"
 
 
 @interface LazyPDFViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate, MFMailComposeViewControllerDelegate, UIDocumentInteractionControllerDelegate,
-									LazyPDFMainToolbarDelegate, LazyPDFMainPagebarDelegate, LazyPDFContentViewDelegate, ThumbsViewControllerDelegate,LazyPDFDrawingViewDelegate,LazyPDFPopoverControllerDelegate>
+									LazyPDFMainToolbarDelegate, LazyPDFMainPagebarDelegate, LazyPDFContentViewDelegate, ThumbsViewControllerDelegate,LazyPDFDrawingViewDelegate,LazyPDFPopoverControllerDelegate,LazyPDFDrawToolbarDelegate>
 {
     LazyPDFPropertyController *lazyPropertyController;
     LazyPDFPopoverController *popover;
@@ -63,7 +66,33 @@
 
 @implementation LazyPDFViewController
 {
-	
+    LazyPDFDocument *document;
+    
+    UIScrollView *theScrollView;
+    
+    LazyPDFMainToolbar *mainToolbar;
+    
+    LazyPDFDrawToolbar *drawToolbar;
+    
+    LazyPDFMainPagebar *mainPagebar;
+    
+    NSMutableDictionary *contentViews;
+    
+    UIUserInterfaceIdiom userInterfaceIdiom;
+    
+    NSInteger currentPage, minimumPage, maximumPage;
+    
+    UIDocumentInteractionController *documentInteraction;
+    
+    UIPrintInteractionController *printInteraction;
+    
+    CGFloat scrollViewOutset;
+    
+    CGSize lastAppearSize;
+    
+    NSDate *lastHideTime;
+    
+    BOOL ignoreDidScroll;
 }
 
 #pragma mark - Constants
@@ -72,6 +101,8 @@
 
 #define TOOLBAR_HEIGHT 44.0f
 #define PAGEBAR_HEIGHT 48.0f
+#define DRAWBAR_HEIGHT 400.0f
+#define DRAWBAR_WIDTH 44.0f
 
 #define SCROLLVIEW_OUTSET_SMALL 4.0f
 #define SCROLLVIEW_OUTSET_LARGE 8.0f
@@ -358,6 +389,11 @@
 	mainToolbar.delegate = self; // LazyPDFMainToolbarDelegate
 	[self.view addSubview:mainToolbar];
 
+    CGRect drawbarRect = CGRectMake(10, viewRect.origin.y+TOOLBAR_HEIGHT+10, DRAWBAR_WIDTH, DRAWBAR_HEIGHT);
+    drawToolbar = [[LazyPDFDrawToolbar alloc] initWithFrame:drawbarRect document:document]; // LazyPDFMainToolbar
+    drawToolbar.delegate = self; // LazyPDFDrawToolbarDelegate
+    [self.view addSubview:drawToolbar];
+
 	CGRect pagebarRect = self.view.bounds; pagebarRect.size.height = PAGEBAR_HEIGHT;
 	pagebarRect.origin.y = (self.view.bounds.size.height - pagebarRect.size.height);
 	mainPagebar = [[LazyPDFMainPagebar alloc] initWithFrame:pagebarRect document:document]; // LazyPDFMainPagebar
@@ -449,6 +485,8 @@
 #endif
 
 	mainToolbar = nil; mainPagebar = nil;
+    
+    drawToolbar = nil;
 
 	theScrollView = nil; contentViews = nil; lastHideTime = nil;
 
@@ -612,9 +650,9 @@
 			{
 				if ([lastHideTime timeIntervalSinceNow] < -0.75) // Delay since hide
 				{
-					if ((mainToolbar.alpha < 1.0f) || (mainPagebar.alpha < 1.0f)) // Hidden
+					if ((mainToolbar.alpha < 1.0f) || (mainPagebar.alpha < 1.0f) || (drawToolbar.alpha < 1.0f)) // Hidden
 					{
-						[mainToolbar showToolbar]; [mainPagebar showPagebar]; // Show
+                        [mainToolbar showToolbar]; [mainPagebar showPagebar]; [drawToolbar showToolbar]; // Show
 					}
 				}
 			}
@@ -696,7 +734,7 @@
 
 - (void)contentView:(LazyPDFContentView *)contentView touchesBegan:(NSSet *)touches
 {
-	if ((mainToolbar.alpha > 0.0f) || (mainPagebar.alpha > 0.0f))
+	if ((mainToolbar.alpha > 0.0f) || (mainPagebar.alpha > 0.0f) || (drawToolbar.alpha > 0.0f))
 	{
 		if (touches.count == 1) // Single touches only
 		{
@@ -709,7 +747,7 @@
 			if (CGRectContainsPoint(areaRect, point) == false) return;
 		}
 
-		[mainToolbar hideToolbar]; [mainPagebar hidePagebar]; // Hide
+        [mainToolbar hideToolbar]; [mainPagebar hidePagebar]; [drawToolbar hideToolbar]; // Hide
 
 		lastHideTime = [NSDate date]; // Set last hide time
 	}

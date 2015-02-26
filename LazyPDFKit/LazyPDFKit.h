@@ -35,6 +35,7 @@ FOUNDATION_EXPORT const unsigned char LazyPDFKitVersionString[];
 #import <LazyPDFKit/LazyPDFHSBSupport.h>
 #import <LazyPDFKit/LazyPDFMainPagebar.h>
 #import <LazyPDFKit/LazyPDFMainToolbar.h>
+#import <LazyPDFKit/LazyPDFDrawToolbar.h>
 #import <LazyPDFKit/LazyPDFPopoverController.h>
 #import <LazyPDFKit/LazyPDFPopoverView.h>
 #import <LazyPDFKit/LazyPDFPropertyController.h>
