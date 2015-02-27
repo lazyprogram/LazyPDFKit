@@ -25,13 +25,13 @@
 #define BUTTON_X 8.0f
 #define BUTTON_Y 8.0f
 
-#define BUTTON_SPACE 8.0f
-#define BUTTON_HEIGHT 30.0f
+#define BUTTON_SPACE 1.0f
+#define BUTTON_WIDTH 30.0f
 
 #define BUTTON_FONT_SIZE 15.0f
 #define TEXT_BUTTON_PADDING 24.0f
 
-#define ICON_BUTTON_WIDTH 40.0f
+#define ICON_BUTTON_HEIGHT 30.0f
 
 #define TITLE_FONT_SIZE 19.0f
 #define TITLE_HEIGHT 28.0f
@@ -39,6 +39,18 @@
 #pragma mark - Properties
 
 @synthesize delegate;
+@synthesize penButton;
+@synthesize textButton;
+@synthesize highlightButton;
+@synthesize lineButton;
+@synthesize squareButton;
+@synthesize circleButton;
+@synthesize circleFillButton;
+@synthesize eraserButton;
+@synthesize colorButton;
+@synthesize undoButton;
+@synthesize redoButton;
+@synthesize clearButton;
 
 #pragma mark - LazyPDFMainToolbar instance methods
 
@@ -53,8 +65,8 @@
     
     if ((self = [super initWithFrame:frame]))
     {
-        CGFloat viewWidth = self.bounds.size.width; // Toolbar view width
-        
+        CGFloat viewHeight = self.bounds.size.height; // Toolbar view width
+
 #if (LazyPDF_FLAT_UI == TRUE) // Option
         UIImage *buttonH = nil; UIImage *buttonN = nil;
 #else
@@ -64,208 +76,175 @@
         
         BOOL largeDevice = ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad);
         
-        const CGFloat buttonSpacing = BUTTON_SPACE; const CGFloat iconButtonWidth = ICON_BUTTON_WIDTH;
+        const CGFloat buttonSpacing = BUTTON_SPACE; const CGFloat iconButtonHeight = ICON_BUTTON_HEIGHT;
         
-        CGFloat titleX = BUTTON_X; CGFloat titleWidth = (viewWidth - (titleX + titleX));
+        CGFloat titleY = BUTTON_Y; CGFloat titleHeight = (viewHeight - (titleY + titleY));
         
-        CGFloat leftButtonX = BUTTON_X; // Left-side button start X position
+        CGFloat leftButtonY = BUTTON_Y; // Left-side button start X position
         
-#if (LazyPDF_STANDALONE == FALSE) // Option
+        NSBundle *currentBundle = [NSBundle bundleForClass:[self class]];
         
-        UIFont *doneButtonFont = [UIFont systemFontOfSize:BUTTON_FONT_SIZE];
-        NSString *doneButtonText = NSLocalizedString(@"Done", @"button");
-        CGSize doneButtonSize = [doneButtonText sizeWithFont:doneButtonFont];
-        CGFloat doneButtonWidth = (doneButtonSize.width + TEXT_BUTTON_PADDING);
+        //Pen Button
+        penButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        penButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [penButton setImage:[UIImage imageNamed:@"pen-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [penButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [penButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [penButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        penButton.autoresizingMask = UIViewAutoresizingNone;
+        penButton.exclusiveTouch = YES;
+        penButton.tag = 1;
+        [self addSubview:penButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-        UIButton *doneButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        doneButton.frame = CGRectMake(leftButtonX, BUTTON_Y, doneButtonWidth, BUTTON_HEIGHT);
-        [doneButton setTitleColor:[UIColor colorWithWhite:0.0f alpha:1.0f] forState:UIControlStateNormal];
-        [doneButton setTitleColor:[UIColor colorWithWhite:1.0f alpha:1.0f] forState:UIControlStateHighlighted];
-        [doneButton setTitle:doneButtonText forState:UIControlStateNormal]; doneButton.titleLabel.font = doneButtonFont;
-        [doneButton addTarget:self action:@selector(doneButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-        [doneButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
-        [doneButton setBackgroundImage:buttonN forState:UIControlStateNormal];
-        doneButton.autoresizingMask = UIViewAutoresizingNone;
-        //doneButton.backgroundColor = [UIColor grayColor];
-        doneButton.exclusiveTouch = YES;
+        //Text Button
+        textButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        textButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [textButton setImage:[UIImage imageNamed:@"text-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [textButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [textButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [textButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        textButton.autoresizingMask = UIViewAutoresizingNone;
+        textButton.exclusiveTouch = YES;
+        textButton.tag = 2;
+        [self addSubview:textButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-        [self addSubview:doneButton]; leftButtonX += (doneButtonWidth + buttonSpacing);
+        //Highlight Button
+        highlightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        highlightButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [highlightButton setImage:[UIImage imageNamed:@"squarefill-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [highlightButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [highlightButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [highlightButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        highlightButton.autoresizingMask = UIViewAutoresizingNone;
+        highlightButton.exclusiveTouch = YES;
+        highlightButton.tag = 3;
+        [self addSubview:highlightButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-        titleX += (doneButtonWidth + buttonSpacing); titleWidth -= (doneButtonWidth + buttonSpacing);
+        //Line Button
+        lineButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        lineButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [lineButton setImage:[UIImage imageNamed:@"line-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [lineButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [lineButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [lineButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        lineButton.autoresizingMask = UIViewAutoresizingNone;
+        lineButton.exclusiveTouch = YES;
+        lineButton.tag = 4;
+        [self addSubview:lineButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-#endif // end of LazyPDF_STANDALONE Option
+        //Square Button
+        squareButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        squareButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [squareButton setImage:[UIImage imageNamed:@"square-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [squareButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [squareButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [squareButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        squareButton.autoresizingMask = UIViewAutoresizingNone;
+        squareButton.exclusiveTouch = YES;
+        squareButton.tag = 5;
+        [self addSubview:squareButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-#if (LazyPDF_ENABLE_THUMBS == TRUE) // Option
+        //Circle Button
+        circleButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        circleButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [circleButton setImage:[UIImage imageNamed:@"circle-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [circleButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [circleButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [circleButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        circleButton.autoresizingMask = UIViewAutoresizingNone;
+        circleButton.exclusiveTouch = YES;
+        circleButton.tag = 6;
+        [self addSubview:circleButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-        UIButton *thumbsButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        thumbsButton.frame = CGRectMake(leftButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
-        [thumbsButton setImage:[UIImage imageNamed:@"LazyPDF-Thumbs" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-        [thumbsButton addTarget:self action:@selector(thumbsButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-        [thumbsButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
-        [thumbsButton setBackgroundImage:buttonN forState:UIControlStateNormal];
-        thumbsButton.autoresizingMask = UIViewAutoresizingNone;
-        //thumbsButton.backgroundColor = [UIColor grayColor];
-        thumbsButton.exclusiveTouch = YES;
+        //CircleFill Button
+        circleFillButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        circleFillButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [circleFillButton setImage:[UIImage imageNamed:@"circlefill-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [circleFillButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [circleFillButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [circleFillButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        circleFillButton.autoresizingMask = UIViewAutoresizingNone;
+        circleFillButton.exclusiveTouch = YES;
+        circleFillButton.tag = 7;
+        [self addSubview:circleFillButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-        [self addSubview:thumbsButton]; //leftButtonX += (iconButtonWidth + buttonSpacing);
+        //Eraser Button
+        eraserButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        eraserButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [eraserButton setImage:[UIImage imageNamed:@"eraser-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [eraserButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [eraserButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [eraserButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        eraserButton.autoresizingMask = UIViewAutoresizingNone;
+        eraserButton.exclusiveTouch = YES;
+        eraserButton.tag = 8;
+        [self addSubview:eraserButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-        titleX += (iconButtonWidth + buttonSpacing); titleWidth -= (iconButtonWidth + buttonSpacing);
+        //Color Button
+        colorButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        colorButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [colorButton setImage:[self getColorButtonImage:[UIColor blueColor] withSize:[NSNumber numberWithFloat:17.f]] forState:UIControlStateNormal];
+        [colorButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [colorButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [colorButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        colorButton.autoresizingMask = UIViewAutoresizingNone;
+        colorButton.exclusiveTouch = YES;
+        colorButton.tag = 9;
+        [self addSubview:colorButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-#endif // end of LazyPDF_ENABLE_THUMBS Option
         
-        CGFloat rightButtonX = viewWidth; // Right-side buttons start X position
+        //Undo Button
+        undoButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        undoButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [undoButton setImage:[UIImage imageNamed:@"undo-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [undoButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [undoButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [undoButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        undoButton.autoresizingMask = UIViewAutoresizingNone;
+        undoButton.exclusiveTouch = YES;
+        undoButton.tag = 10;
+        [self addSubview:undoButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-#if (LazyPDF_BOOKMARKS == TRUE) // Option
+        //Redo Button
+        redoButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        redoButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [redoButton setImage:[UIImage imageNamed:@"redo-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [redoButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [redoButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [redoButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        redoButton.autoresizingMask = UIViewAutoresizingNone;
+        redoButton.exclusiveTouch = YES;
+        redoButton.tag = 11;
+        [self addSubview:redoButton]; leftButtonY += (iconButtonHeight + buttonSpacing);
+        titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-        rightButtonX -= (iconButtonWidth + buttonSpacing); // Position
+        //Clear Button
+        clearButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        clearButton.frame = CGRectMake(BUTTON_X, leftButtonY, BUTTON_WIDTH, iconButtonHeight);
+        [clearButton setImage:[UIImage imageNamed:@"clear-but" inBundle:currentBundle compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
+        [clearButton addTarget:self action:@selector(drawButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+        [clearButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
+        [clearButton setBackgroundImage:buttonN forState:UIControlStateNormal];
+        clearButton.autoresizingMask = UIViewAutoresizingNone;
+        clearButton.exclusiveTouch = YES;
+        clearButton.tag = 12;
+        [self addSubview:clearButton]; //leftButtonY += (iconButtonHeight + buttonSpacing);
+        //titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-        UIButton *flagButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        flagButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
-        //[flagButton setImage:[UIImage imageNamed:@"LazyPDF-Mark-N"] forState:UIControlStateNormal];
-        [flagButton addTarget:self action:@selector(markButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-        [flagButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
-        [flagButton setBackgroundImage:buttonN forState:UIControlStateNormal];
-        flagButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-        //flagButton.backgroundColor = [UIColor grayColor];
-        flagButton.exclusiveTouch = YES;
-        
-        [self addSubview:flagButton]; titleWidth -= (iconButtonWidth + buttonSpacing);
-        
-        markButton = flagButton; markButton.enabled = NO; markButton.tag = NSIntegerMin;
-        
-        markImageN = [UIImage imageNamed:@"LazyPDF-Mark-N" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil]; // N image
-        markImageY = [UIImage imageNamed:@"LazyPDF-Mark-Y" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil]; // Y image
-        
-#endif // end of LazyPDF_BOOKMARKS Option
-        
-        if (document.canEmail == YES) // Document email enabled
-        {
-            if ([MFMailComposeViewController canSendMail] == YES) // Can email
-            {
-                unsigned long long fileSize = [document.fileSize unsignedLongLongValue];
-                
-                if (fileSize < 15728640ull) // Check attachment size limit (15MB)
-                {
-                    rightButtonX -= (iconButtonWidth + buttonSpacing); // Next position
-                    
-                    UIButton *emailButton = [UIButton buttonWithType:UIButtonTypeCustom];
-                    emailButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
-                    [emailButton setImage:[UIImage imageNamed:@"LazyPDF-Email" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-                    [emailButton addTarget:self action:@selector(emailButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-                    [emailButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
-                    [emailButton setBackgroundImage:buttonN forState:UIControlStateNormal];
-                    emailButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-                    //emailButton.backgroundColor = [UIColor grayColor];
-                    emailButton.exclusiveTouch = YES;
-                    
-                    [self addSubview:emailButton]; titleWidth -= (iconButtonWidth + buttonSpacing);
-                }
-            }
-        }
-        
-        if ((document.canPrint == YES) && (document.password == nil)) // Document print enabled
-        {
-            Class printInteractionController = NSClassFromString(@"UIPrintInteractionController");
-            
-            if ((printInteractionController != nil) && [printInteractionController isPrintingAvailable])
-            {
-                rightButtonX -= (iconButtonWidth + buttonSpacing); // Next position
-                
-                UIButton *printButton = [UIButton buttonWithType:UIButtonTypeCustom];
-                printButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
-                [printButton setImage:[UIImage imageNamed:@"LazyPDF-Print" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-                [printButton addTarget:self action:@selector(printButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-                [printButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
-                [printButton setBackgroundImage:buttonN forState:UIControlStateNormal];
-                printButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-                //printButton.backgroundColor = [UIColor grayColor];
-                printButton.exclusiveTouch = YES;
-                
-                [self addSubview:printButton]; titleWidth -= (iconButtonWidth + buttonSpacing);
-            }
-        }
-        
-        if (document.canExport == YES) // Document export enabled
-        {
-            rightButtonX -= (iconButtonWidth + buttonSpacing); // Next position
-            
-            UIButton *exportButton = [UIButton buttonWithType:UIButtonTypeCustom];
-            exportButton.frame = CGRectMake(rightButtonX, BUTTON_Y, iconButtonWidth, BUTTON_HEIGHT);
-            [exportButton setImage:[UIImage imageNamed:@"LazyPDF-Export" inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil] forState:UIControlStateNormal];
-            [exportButton addTarget:self action:@selector(exportButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-            [exportButton setBackgroundImage:buttonH forState:UIControlStateHighlighted];
-            [exportButton setBackgroundImage:buttonN forState:UIControlStateNormal];
-            exportButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin;
-            //exportButton.backgroundColor = [UIColor grayColor];
-            exportButton.exclusiveTouch = YES;
-            
-            [self addSubview:exportButton]; titleWidth -= (iconButtonWidth + buttonSpacing);
-        }
-        
-        if (largeDevice == YES) // Show document filename in toolbar
-        {
-            CGRect titleRect = CGRectMake(titleX, BUTTON_Y, titleWidth, TITLE_HEIGHT);
-            
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:titleRect];
-            
-            titleLabel.textAlignment = NSTextAlignmentCenter;
-            titleLabel.font = [UIFont systemFontOfSize:TITLE_FONT_SIZE];
-            titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-            titleLabel.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
-            titleLabel.textColor = [UIColor colorWithWhite:0.0f alpha:1.0f];
-            titleLabel.backgroundColor = [UIColor clearColor];
-            titleLabel.adjustsFontSizeToFitWidth = YES;
-            titleLabel.minimumScaleFactor = 0.75f;
-            titleLabel.text = [document.fileName stringByDeletingPathExtension];
-#if (LazyPDF_FLAT_UI == FALSE) // Option
-            titleLabel.shadowColor = [UIColor colorWithWhite:0.75f alpha:1.0f];
-            titleLabel.shadowOffset = CGSizeMake(0.0f, 1.0f);
-#endif // end of LazyPDF_FLAT_UI Option
-            
-            [self addSubview:titleLabel];
-        }
+        [self clearButtonSelection];
     }
     
     return self;
-}
-
-- (void)setBookmarkState:(BOOL)state
-{
-#if (LazyPDF_BOOKMARKS == TRUE) // Option
-    
-    if (state != markButton.tag) // Only if different state
-    {
-        if (self.hidden == NO) // Only if toolbar is visible
-        {
-            UIImage *image = (state ? markImageY : markImageN);
-            
-            [markButton setImage:image forState:UIControlStateNormal];
-        }
-        
-        markButton.tag = state; // Update bookmarked state tag
-    }
-    
-    if (markButton.enabled == NO) markButton.enabled = YES;
-    
-#endif // end of LazyPDF_BOOKMARKS Option
-}
-
-- (void)updateBookmarkImage
-{
-#if (LazyPDF_BOOKMARKS == TRUE) // Option
-    
-    if (markButton.tag != NSIntegerMin) // Valid tag
-    {
-        BOOL state = markButton.tag; // Bookmarked state
-        
-        UIImage *image = (state ? markImageY : markImageN);
-        
-        [markButton setImage:image forState:UIControlStateNormal];
-    }
-    
-    if (markButton.enabled == NO) markButton.enabled = YES;
-    
-#endif // end of LazyPDF_BOOKMARKS Option
 }
 
 - (void)hideToolbar
@@ -290,8 +269,6 @@
 {
     if (self.hidden == YES)
     {
-        [self updateBookmarkImage]; // First
-        
         [UIView animateWithDuration:0.25 delay:0.0
                             options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionAllowUserInteraction
                          animations:^(void)
@@ -304,36 +281,53 @@
     }
 }
 
+- (UIImage *)getColorButtonImage:(UIColor *)color withSize:(NSNumber *)size
+{
+    
+    UIImage *colorCircle;
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake([size floatValue], [size floatValue]), NO, 0.0f);
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextSaveGState(ctx);
+    
+    CGRect rect = CGRectMake(0, 0, [size intValue], [size intValue]);
+    CGContextSetFillColorWithColor(ctx, color.CGColor);
+    CGContextFillEllipseInRect(ctx, rect);
+    
+    // set stroking color and draw circle
+    //CGContextSetRGBStrokeColor(ctx, 1, 0, 0, 1);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor whiteColor].CGColor);
+    CGRect circleRect = CGRectMake(0, 0, [size intValue], [size intValue]);
+    circleRect = CGRectInset(circleRect, 3, 3);
+    CGContextStrokeEllipseInRect(ctx, circleRect);
+    
+    CGContextRestoreGState(ctx);
+    colorCircle = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return colorCircle;
+}
+
+- (void)clearButtonSelection
+{
+    penButton.backgroundColor = [UIColor clearColor];
+    textButton.backgroundColor = [UIColor clearColor];
+    highlightButton.backgroundColor = [UIColor clearColor];
+    lineButton.backgroundColor = [UIColor clearColor];
+    squareButton.backgroundColor = [UIColor clearColor];
+    circleButton.backgroundColor = [UIColor clearColor];
+    circleFillButton.backgroundColor = [UIColor clearColor];
+    eraserButton.backgroundColor = [UIColor clearColor];
+    colorButton.backgroundColor = [UIColor clearColor];
+    undoButton.backgroundColor = [UIColor clearColor];
+    redoButton.backgroundColor = [UIColor clearColor];
+    clearButton.backgroundColor = [UIColor clearColor];
+}
+
 #pragma mark - UIButton action methods
 
-- (void)doneButtonTapped:(UIButton *)button
+- (void)drawButtonTapped:(UIButton *)button
 {
-    [delegate tappedInToolbar:self doneButton:button];
-}
-
-- (void)thumbsButtonTapped:(UIButton *)button
-{
-    [delegate tappedInToolbar:self thumbsButton:button];
-}
-
-- (void)exportButtonTapped:(UIButton *)button
-{
-    [delegate tappedInToolbar:self exportButton:button];
-}
-
-- (void)printButtonTapped:(UIButton *)button
-{
-    [delegate tappedInToolbar:self printButton:button];
-}
-
-- (void)emailButtonTapped:(UIButton *)button
-{
-    [delegate tappedInToolbar:self emailButton:button];
-}
-
-- (void)markButtonTapped:(UIButton *)button
-{
-    [delegate tappedInToolbar:self markButton:button];
+    [delegate tappedInToolbar:self drawButton:button];
 }
 
 @end

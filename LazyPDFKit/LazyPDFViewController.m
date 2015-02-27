@@ -426,7 +426,7 @@
     self.lineWidth = [NSNumber numberWithFloat:2.0];
     self.lineAlpha = [NSNumber numberWithFloat:1.0];
     self.lineColor = [UIColor blueColor];
-    [self setColorButtonImage:self.lineColor];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -977,8 +977,9 @@
     
     return YES;
 }
-- (IBAction)drawMode:(id)sender {
-    UIButton *button = (UIButton *)sender;
+//- (IBAction)drawMode:(id)sender {
+- (void)tappedInToolbar:(LazyPDFMainToolbar *)toolbar drawButton:(UIButton *)button
+{
     if (button.tag==9) {
         [self openProperty:button];
     }else{
@@ -1002,13 +1003,7 @@
                             [self saveAnnotation];
                         }
                     }
-                    if (button.tag<=8) {
-                        //only edit mode buttons till eraser
-                        for (UIButton *toolButton in self.drawToolBar.subviews)
-                        {
-                            toolButton.backgroundColor = [UIColor clearColor];
-                        }
-                    }
+                    [drawToolbar clearButtonSelection];
                     if (self.drawingView!=nil){
                         self.drawingView.delegate = self;
                         if (button.tag<=8) {
@@ -1156,31 +1151,8 @@
 }
 - (void)updateButtonStatus
 {
-    self.undoButton.enabled = [self.drawingView canUndo];
-    self.redoButton.enabled = [self.drawingView canRedo];
-}
--(void)setColorButtonImage:(UIColor *)color{
-    UIImage *colorCircle;
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(20.f, 20.f), NO, 0.0f);
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextSaveGState(ctx);
-    
-    CGRect rect = CGRectMake(0, 0, 20, 20);
-    CGContextSetFillColorWithColor(ctx, color.CGColor);
-    CGContextFillEllipseInRect(ctx, rect);
-    
-    // set stroking color and draw circle
-    //CGContextSetRGBStrokeColor(ctx, 1, 0, 0, 1);
-    CGContextSetStrokeColorWithColor(ctx, [UIColor whiteColor].CGColor);
-    CGRect circleRect = CGRectMake(0, 0, 20, 20);
-    circleRect = CGRectInset(circleRect, 3, 3);
-    CGContextStrokeEllipseInRect(ctx, circleRect);
-    
-    CGContextRestoreGState(ctx);
-    colorCircle = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    [self.colorButton setImage:colorCircle forState:UIControlStateNormal];
+    drawToolbar.undoButton.enabled = [self.drawingView canUndo];
+    drawToolbar.redoButton.enabled = [self.drawingView canRedo];
 }
 
 - (void)popoverControllerDidDismissPopover:(LazyPDFPopoverController *)popoverController

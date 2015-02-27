@@ -84,7 +84,6 @@
 		90ED264F1A9F103800863062 /* LazyPDFTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED26091A9F103800863062 /* LazyPDFTouchView.m */; };
 		90ED26501A9F103800863062 /* LazyPDFViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 90ED260A1A9F103800863062 /* LazyPDFViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90ED26511A9F103800863062 /* LazyPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED260B1A9F103800863062 /* LazyPDFViewController.m */; };
-		90ED26521A9F103800863062 /* LazyPDFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90ED260C1A9F103800863062 /* LazyPDFViewController.xib */; };
 		90ED26531A9F103800863062 /* ThumbsMainToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 90ED260D1A9F103800863062 /* ThumbsMainToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90ED26541A9F103800863062 /* ThumbsMainToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90ED260E1A9F103800863062 /* ThumbsMainToolbar.m */; };
 		90ED26551A9F103800863062 /* ThumbsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 90ED260F1A9F103800863062 /* ThumbsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -275,7 +274,6 @@
 		90ED26091A9F103800863062 /* LazyPDFTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFTouchView.m; sourceTree = "<group>"; };
 		90ED260A1A9F103800863062 /* LazyPDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFViewController.h; sourceTree = "<group>"; };
 		90ED260B1A9F103800863062 /* LazyPDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFViewController.m; sourceTree = "<group>"; };
-		90ED260C1A9F103800863062 /* LazyPDFViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LazyPDFViewController.xib; sourceTree = "<group>"; };
 		90ED260D1A9F103800863062 /* ThumbsMainToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbsMainToolbar.h; sourceTree = "<group>"; };
 		90ED260E1A9F103800863062 /* ThumbsMainToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbsMainToolbar.m; sourceTree = "<group>"; };
 		90ED260F1A9F103800863062 /* ThumbsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbsViewController.h; sourceTree = "<group>"; };
@@ -503,7 +501,6 @@
 				90ED26091A9F103800863062 /* LazyPDFTouchView.m */,
 				90ED260A1A9F103800863062 /* LazyPDFViewController.h */,
 				90ED260B1A9F103800863062 /* LazyPDFViewController.m */,
-				90ED260C1A9F103800863062 /* LazyPDFViewController.xib */,
 				90ED260D1A9F103800863062 /* ThumbsMainToolbar.h */,
 				90ED260E1A9F103800863062 /* ThumbsMainToolbar.m */,
 				90ED260F1A9F103800863062 /* ThumbsViewController.h */,
@@ -829,7 +826,6 @@
 				90ED26BB1A9F111700863062 /* text-but.png in Resources */,
 				90ED269C1A9F111700863062 /* eraser-but2@2x.png in Resources */,
 				90ED268F1A9F111700863062 /* circle-double-but@2x.png in Resources */,
-				90ED26521A9F103800863062 /* LazyPDFViewController.xib in Resources */,
 				90ED26901A9F111700863062 /* circlefill-but.png in Resources */,
 				90ED26BC1A9F111700863062 /* text-but@2x.png in Resources */,
 				90ED26A11A9F111700863062 /* Pen-Button-Y.png in Resources */,

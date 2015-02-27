@@ -17,24 +17,29 @@
 
 @required // Delegate protocols
 
-- (void)tappedInToolbar:(LazyPDFDrawToolbar *)toolbar doneButton:(UIButton *)button;
-- (void)tappedInToolbar:(LazyPDFDrawToolbar *)toolbar thumbsButton:(UIButton *)button;
-- (void)tappedInToolbar:(LazyPDFDrawToolbar *)toolbar exportButton:(UIButton *)button;
-- (void)tappedInToolbar:(LazyPDFDrawToolbar *)toolbar printButton:(UIButton *)button;
-- (void)tappedInToolbar:(LazyPDFDrawToolbar *)toolbar emailButton:(UIButton *)button;
-- (void)tappedInToolbar:(LazyPDFDrawToolbar *)toolbar markButton:(UIButton *)button;
+- (void)tappedInToolbar:(LazyPDFDrawToolbar *)toolbar drawButton:(UIButton *)button;
 
 @end
 
 @interface LazyPDFDrawToolbar : UIXToolbarView
 
 @property (nonatomic, weak, readwrite) id <LazyPDFDrawToolbarDelegate> delegate;
+@property (nonatomic,strong) UIButton *penButton;
+@property (nonatomic,strong) UIButton *textButton;
+@property (nonatomic,strong) UIButton *highlightButton;
+@property (nonatomic,strong) UIButton *lineButton;
+@property (nonatomic,strong) UIButton *squareButton;
+@property (nonatomic,strong) UIButton *circleButton;
+@property (nonatomic,strong) UIButton *circleFillButton;
+@property (nonatomic,strong) UIButton *eraserButton;
+@property (nonatomic,strong) UIButton *colorButton;
+@property (nonatomic,strong) UIButton *undoButton;
+@property (nonatomic,strong) UIButton *redoButton;
+@property (nonatomic,strong) UIButton *clearButton;
 
 - (instancetype)initWithFrame:(CGRect)frame document:(LazyPDFDocument *)document;
-
-- (void)setBookmarkState:(BOOL)state;
-
 - (void)hideToolbar;
 - (void)showToolbar;
-
+- (UIImage *)getColorButtonImage:(UIColor *)color withSize:(NSNumber *)size;
+- (void) clearButtonSelection;
 @end
