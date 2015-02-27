@@ -41,5 +41,5 @@
 - (void)hideToolbar;
 - (void)showToolbar;
 - (UIImage *)getColorButtonImage:(UIColor *)color withSize:(NSNumber *)size;
-- (void) clearButtonSelection;
+- (void)clearButtonSelection:(NSInteger)upto;
 @end

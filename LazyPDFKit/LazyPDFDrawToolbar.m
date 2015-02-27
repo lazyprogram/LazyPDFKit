@@ -241,7 +241,7 @@
         [self addSubview:clearButton]; //leftButtonY += (iconButtonHeight + buttonSpacing);
         //titleY += (iconButtonHeight + buttonSpacing); titleHeight -= (iconButtonHeight + buttonSpacing);
         
-        [self clearButtonSelection];
+        [self clearButtonSelection:12];
     }
     
     return self;
@@ -307,20 +307,32 @@
     return colorCircle;
 }
 
-- (void)clearButtonSelection
+- (void)clearButtonSelection:(NSInteger)upto
 {
-    penButton.backgroundColor = [UIColor clearColor];
-    textButton.backgroundColor = [UIColor clearColor];
-    highlightButton.backgroundColor = [UIColor clearColor];
-    lineButton.backgroundColor = [UIColor clearColor];
-    squareButton.backgroundColor = [UIColor clearColor];
-    circleButton.backgroundColor = [UIColor clearColor];
-    circleFillButton.backgroundColor = [UIColor clearColor];
-    eraserButton.backgroundColor = [UIColor clearColor];
-    colorButton.backgroundColor = [UIColor clearColor];
-    undoButton.backgroundColor = [UIColor clearColor];
-    redoButton.backgroundColor = [UIColor clearColor];
-    clearButton.backgroundColor = [UIColor clearColor];
+    if(upto>=penButton.tag)
+        penButton.backgroundColor = [UIColor clearColor];
+    if(upto>=textButton.tag)
+        textButton.backgroundColor = [UIColor clearColor];
+    if(upto>=highlightButton.tag)
+        highlightButton.backgroundColor = [UIColor clearColor];
+    if(upto>=lineButton.tag)
+        lineButton.backgroundColor = [UIColor clearColor];
+    if(upto>=squareButton.tag)
+        squareButton.backgroundColor = [UIColor clearColor];
+    if(upto>=circleButton.tag)
+        circleButton.backgroundColor = [UIColor clearColor];
+    if(upto>=circleFillButton.tag)
+        circleFillButton.backgroundColor = [UIColor clearColor];
+    if(upto>=eraserButton.tag)
+        eraserButton.backgroundColor = [UIColor clearColor];
+    if(upto>=colorButton.tag)
+        colorButton.backgroundColor = [UIColor clearColor];
+    if(upto>=undoButton.tag)
+        undoButton.backgroundColor = [UIColor clearColor];
+    if(upto>=redoButton.tag)
+        redoButton.backgroundColor = [UIColor clearColor];
+    if(upto>=clearButton.tag)
+        clearButton.backgroundColor = [UIColor clearColor];
 }
 
 #pragma mark - UIButton action methods

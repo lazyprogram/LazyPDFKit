@@ -992,7 +992,8 @@
                             [self saveAnnotation];
                         }
                     }
-                    [drawToolbar clearButtonSelection];
+                    if (button.tag<=8)
+                        [drawToolbar clearButtonSelection:8]; // clear upto eraser button
                     if (self.drawingView!=nil){
                         self.drawingView.delegate = self;
                         if (button.tag<=8) {
