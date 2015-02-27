@@ -49,6 +49,14 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationItem.title = @"Properties";
+    popover.arrowDirection = LazyPDFPopoverArrowDirectionUp;
+    popover.contentSize = CGSizeMake(350, 250);
+    popover.contentView.frame = CGRectMake(popover.contentView.frame.origin.x, popover.contentView.frame.origin.y, popover.contentView.frame.size.width, 250);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -127,9 +135,9 @@
         picker.delegate = self;
         [self.navigationController pushViewController:picker animated:YES];
         //[ picker presentModallyOverViewController: self ];
-        
+        popover.arrowDirection = LazyPDFPopoverArrowDirectionUp;
         popover.contentSize = CGSizeMake(popover.contentView.frame.size.width, [LazyPDFColorPickerController idealSizeForViewInPopover].height);
-        popover.contentView.frame = CGRectMake(popover.contentView.frame.origin.x, popover.contentView.frame.origin.y, popover.contentView.frame.size.width, [LazyPDFColorPickerController idealSizeForViewInPopover].height);
+        popover.contentView.frame = CGRectMake(popover.contentView.frame.origin.x, popover.contentView.frame.origin.y, popover.contentView.frame.size.width, [LazyPDFColorPickerController idealSizeForViewInPopover].height+50);
     }
 }
 - (void)sliderThickAction:(UISlider *)sender

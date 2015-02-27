@@ -50,18 +50,7 @@
     UINavigationController *navController;
 }
 @property (strong, nonatomic) IBOutlet UIView *drawToolBar;
-@property (strong, nonatomic) IBOutlet UIButton *penButton;
-@property (strong, nonatomic) IBOutlet UIButton *textButton;
-@property (strong, nonatomic) IBOutlet UIButton *highlightButton;
-@property (strong, nonatomic) IBOutlet UIButton *lineButton;
-@property (strong, nonatomic) IBOutlet UIButton *squareButton;
-@property (strong, nonatomic) IBOutlet UIButton *circleButton;
-@property (strong, nonatomic) IBOutlet UIButton *circleFillButton;
-@property (strong, nonatomic) IBOutlet UIButton *eraserButton;
-@property (strong, nonatomic) IBOutlet UIButton *colorButton;
-@property (strong, nonatomic) IBOutlet UIButton *undoButton;
-@property (strong, nonatomic) IBOutlet UIButton *redoButton;
-@property (strong, nonatomic) IBOutlet UIButton *clearButton;
+
 @end
 
 @implementation LazyPDFViewController
@@ -1131,15 +1120,16 @@
     lazyPropertyController.lineColor = self.lineColor;
     lazyPropertyController.lineAlpha = self.lineAlpha;
     lazyPropertyController.lineWidth = self.lineWidth;
-    lazyPropertyController.colorButton = self.colorButton;
+    lazyPropertyController.colorButton = drawToolbar.colorButton;
     
     navController = nil;
     navController = [[UINavigationController alloc] initWithRootViewController:lazyPropertyController];
-    navController.navigationBarHidden = YES;
+    //navController.navigationBarHidden = YES;
     
     popover = nil;
     popover = [[LazyPDFPopoverController alloc] initWithViewController:navController];
-    popover.contentSize = CGSizeMake(350, 200);
+    popover.arrowDirection = LazyPDFPopoverArrowDirectionUp;
+    popover.contentSize = CGSizeMake(350, 250);
     popover.delegate = self;
     lazyPropertyController.popover = popover;
     [popover presentPopoverFromView:button];

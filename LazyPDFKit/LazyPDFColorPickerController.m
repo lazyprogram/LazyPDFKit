@@ -88,7 +88,8 @@ static void HSVFromUIColor(UIColor* color, float* h, float* s, float* v)
 
 + (LazyPDFColorPickerController*) colorPickerViewController
 {
-	return [[self alloc] initWithNibName: @"LazyPDFColorPickerView" bundle: nil];
+	NSBundle *currentBundle = [NSBundle bundleForClass:[self class]];
+    return [[self alloc] initWithNibName: @"LazyPDFColorPickerView" bundle: currentBundle];
 }
 
 //------------------------------------------------------------------------------

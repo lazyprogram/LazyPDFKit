@@ -52,6 +52,5 @@
 @property (nonatomic, weak, readwrite) id <LazyPDFViewControllerDelegate> delegate;
 
 - (instancetype)initWithLazyPDFDocument:(LazyPDFDocument *)object;
-- (IBAction)drawMode:(id)sender;
 
 @end
