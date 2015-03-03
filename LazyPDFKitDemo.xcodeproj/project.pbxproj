@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		907197B91AA55F990023698F /* LazyPDFModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 907197B71AA55F990023698F /* LazyPDFModel.xcdatamodeld */; };
-		90719A0E1AA576C70023698F /* LazyPDFDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 90719A0C1AA576C70023698F /* LazyPDFDataManager.h */; };
+		90719A0E1AA576C70023698F /* LazyPDFDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 90719A0C1AA576C70023698F /* LazyPDFDataManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90719A0F1AA576C70023698F /* LazyPDFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90719A0D1AA576C70023698F /* LazyPDFDataManager.m */; };
-		90719A121AA5828F0023698F /* Annotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 90719A101AA5828F0023698F /* Annotation.h */; };
+		90719A121AA5828F0023698F /* Annotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 90719A101AA5828F0023698F /* Annotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90719A131AA5828F0023698F /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 90719A111AA5828F0023698F /* Annotation.m */; };
-		90719A161AA582900023698F /* File.h in Headers */ = {isa = PBXBuildFile; fileRef = 90719A141AA582900023698F /* File.h */; };
+		90719A161AA582900023698F /* File.h in Headers */ = {isa = PBXBuildFile; fileRef = 90719A141AA582900023698F /* File.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90719A171AA582900023698F /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 90719A151AA582900023698F /* File.m */; };
 		90E68E671A9F1E2E00A13700 /* LazyPDFDrawToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 90E68E651A9F1E2E00A13700 /* LazyPDFDrawToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90E68E681A9F1E2E00A13700 /* LazyPDFDrawToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E68E661A9F1E2E00A13700 /* LazyPDFDrawToolbar.m */; };
@@ -513,14 +513,14 @@
 				90ED26101A9F103800863062 /* ThumbsViewController.m */,
 				90ED26111A9F103800863062 /* UIXToolbarView.h */,
 				90ED26121A9F103800863062 /* UIXToolbarView.m */,
-				90ED25AF1A9F0FF300863062 /* Supporting Files */,
-				907197B71AA55F990023698F /* LazyPDFModel.xcdatamodeld */,
 				90719A141AA582900023698F /* File.h */,
 				90719A151AA582900023698F /* File.m */,
 				90719A101AA5828F0023698F /* Annotation.h */,
 				90719A111AA5828F0023698F /* Annotation.m */,
 				90719A0C1AA576C70023698F /* LazyPDFDataManager.h */,
 				90719A0D1AA576C70023698F /* LazyPDFDataManager.m */,
+				90ED25AF1A9F0FF300863062 /* Supporting Files */,
+				907197B71AA55F990023698F /* LazyPDFModel.xcdatamodeld */,
 			);
 			path = LazyPDFKit;
 			sourceTree = "<group>";

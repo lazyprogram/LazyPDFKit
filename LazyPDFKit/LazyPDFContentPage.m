@@ -510,7 +510,7 @@
 {
     drawingImageView.image = previewImage;
     //NSLog(@"Drawing View Frame : %2f,%2f,%2f,%2f",self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
-    drawingImageView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y+44, self.frame.size.width, self.frame.size.height-88);
+    drawingImageView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
     drawingImageView.hidden = NO;
 }
 - (void)hideDrawingView

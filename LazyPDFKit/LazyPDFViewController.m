@@ -991,7 +991,10 @@
                     if (self.drawingView==nil && button.tag<=7){
                         //only edit mode buttons till circle fill
                         self.drawingView = [[LazyPDFDrawingView alloc] initWithFrame:contentPage.frame];
-                        
+                        UIImage *drawingImage = [contentPage getDrawingImage];
+                        if(drawingImage!=nil){
+                            [self.drawingView loadImage:drawingImage];
+                        }
                     }else{
                         if ((button.tag==1 && self.drawingView.drawTool == LazyPDFDrawingToolTypePen) || (button.tag==2 && self.drawingView.drawTool == LazyPDFDrawingToolTypeText) || (button.tag==3 && self.drawingView.drawTool == LazyPDFDrawingToolTypeRectagleFill) || (button.tag==4 && self.drawingView.drawTool == LazyPDFDrawingToolTypeLine) || (button.tag==5 && self.drawingView.drawTool == LazyPDFDrawingToolTypeRectagleStroke) || (button.tag==6 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEllipseStroke) || (button.tag==7 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEllipseFill)) {
                             [self saveAnnotation];
@@ -1000,11 +1003,6 @@
                     if (button.tag<=8)
                         [drawToolbar clearButtonSelection:8]; // clear upto eraser button
                     if (self.drawingView!=nil){
-                        UIImage *drawingImage = [contentPage getDrawingImage];
-                        if(drawingImage!=nil){
-                            [self.drawingView loadImage:drawingImage];
-                        }
-                        
                         self.drawingView.delegate = self;
                         if (button.tag<=8) {
                             //only edit mode buttons till eraser
