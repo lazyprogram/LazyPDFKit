@@ -28,6 +28,7 @@
 #import "LazyPDFContentTile.h"
 #import "CGPDFDocument.h"
 
+
 @implementation LazyPDFContentPage
 {
 	NSMutableArray *_links;
@@ -43,6 +44,8 @@
 
 	CGFloat _pageOffsetX;
 	CGFloat _pageOffsetY;
+    
+    UIImageView *drawingImageView;
 }
 
 #pragma mark - LazyPDFContentPage class methods
@@ -497,13 +500,62 @@
 	LazyPDFContentPage *view = [self initWithFrame:viewRect];
 
 	if (view != nil) [self buildAnnotationLinksList];
+    
+    drawingImageView = [[UIImageView alloc] initWithImage:nil];
+    [self addSubview:drawingImageView];
 
 	return view;
+}
+- (void)showDrawingView:(UIImage *)previewImage
+{
+    drawingImageView.image = previewImage;
+    //NSLog(@"Drawing View Frame : %2f,%2f,%2f,%2f",self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height);
+    drawingImageView.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y+44, self.frame.size.width, self.frame.size.height-88);
+    drawingImageView.hidden = NO;
+}
+- (void)hideDrawingView
+{
+    drawingImageView.hidden = YES;
+}
+- (UIImage *)getDrawingImage
+{
+    return drawingImageView.image;
+}
+- (void)saveImagetoPDF: (LazyPDFDrawingView *)drawingView withURL:(NSURL *)destURL
+{
+    
+    NSString *filename = @"test.pdf";
+    NSArray *pathArray = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
+    NSString *documentsDirectory = [pathArray objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:filename];
+
+    
+    // Create the new destination pdf & set the font
+    //NSURL               *destURL        = [NSURL fileURLWithPath:filePath isDirectory:NO];
+    CGContextRef        destPDFContext  = CGPDFContextCreateWithURL((__bridge CFURLRef)destURL, NULL, NULL);
+    //CGContextSelectFont(destPDFContext, "CourierNewPS-BoldMT", 12.0, kCGEncodingFontSpecific);
+    
+    // Copy the first page of the source pdf into the destination pdf
+    
+    CGRect              pdfCropBoxRect  = CGPDFPageGetBoxRect(_PDFPageRef, kCGPDFMediaBox);
+    CGContextBeginPage  (destPDFContext, &pdfCropBoxRect);
+    CGContextDrawPDFPage(destPDFContext, _PDFPageRef);
+    
+    // Draw the image
+    CGContextDrawImage(destPDFContext, drawingView.frame, drawingView.image.CGImage);
+    
+    // Close the destination file
+    CGPDFContextEndPage (destPDFContext);
+    CGContextRelease(destPDFContext);
+        
 }
 
 - (void)removeFromSuperview
 {
-	self.layer.delegate = nil;
+    [drawingImageView removeFromSuperview];
+    drawingImageView = nil;
+    
+    self.layer.delegate = nil;
 
 	//self.layer.contents = nil;
 

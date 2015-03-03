@@ -40,6 +40,7 @@
 #import "LazyPDFMainToolbar.h"
 #import "LazyPDFMainPagebar.h"
 #import "LazyPDFDrawToolbar.h"
+#import "LazyPDFDataManager.h"
 
 
 @interface LazyPDFViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate, MFMailComposeViewControllerDelegate, UIDocumentInteractionControllerDelegate,
@@ -157,6 +158,9 @@
 	contentView.message = self; [contentViews setObject:contentView forKey:[NSNumber numberWithInteger:page]]; [scrollView addSubview:contentView];
 
 	[contentView showPageThumb:fileURL page:page password:phrase guid:guid]; // Request page preview thumb
+    
+    UIImage *image = [[LazyPDFDataManager sharedInstance] getAnnotationImage:[document filePath] withPage:[NSNumber numberWithInteger:page]];
+    [contentView setContentDrawingImageView:image];
 }
 
 - (void)layoutContentViews:(UIScrollView *)scrollView
@@ -983,6 +987,7 @@
                 if([subview2 isKindOfClass:[LazyPDFContentPage class]]){
                     subview2.userInteractionEnabled = YES;
                     LazyPDFContentPage *contentPage = (LazyPDFContentPage *)subview2;
+                    [contentPage hideDrawingView];
                     if (self.drawingView==nil && button.tag<=7){
                         //only edit mode buttons till circle fill
                         self.drawingView = [[LazyPDFDrawingView alloc] initWithFrame:contentPage.frame];
@@ -995,6 +1000,11 @@
                     if (button.tag<=8)
                         [drawToolbar clearButtonSelection:8]; // clear upto eraser button
                     if (self.drawingView!=nil){
+                        UIImage *drawingImage = [contentPage getDrawingImage];
+                        if(drawingImage!=nil){
+                            [self.drawingView loadImage:drawingImage];
+                        }
+                        
                         self.drawingView.delegate = self;
                         if (button.tag<=8) {
                             //only edit mode buttons till eraser
@@ -1087,14 +1097,23 @@
                     //Save Image Coding Starts
                     if (![self isBlankImage:self.drawingView.image] && self.drawingView.image!=nil) {
                         //[contentPage showDrawingView:self.drawingView.image];
-                        [contentPage addSubview:self.drawingView];
-                        /*
-                         [self.drawingView removeFromSuperview];
-                         subview2.userInteractionEnabled = NO;
-                         subview.userInteractionEnabled = NO;
-                         [theScrollView setScrollEnabled:YES];*/
+                        //[contentPage addSubview:self.drawingView];
                         
+                        NSMutableDictionary *annotDict = [NSMutableDictionary new];
+                        NSData *image = UIImagePNGRepresentation(self.drawingView.image);
+                        [annotDict setValue:image forKey:@"image"];
+                        [annotDict setValue:[NSNumber numberWithInteger:currentPage] forKey:@"page"];
+                        
+                        [annotDict setValue:[document fileDate] forKey:@"fileDate"];
+                        [annotDict setValue:[document fileSize] forKey:@"fileSize"];
+                        [annotDict setValue:[document pageCount] forKey:@"pageCount"];
+                        [annotDict setValue:[document filePath] forKey:@"filePath"];
+                        
+                        [[LazyPDFDataManager sharedInstance] addAnnotation:annotDict];
+                        annotDict = nil;
                     }
+                    [contentPage showDrawingView:self.drawingView.image];
+                    [self.drawingView removeFromSuperview];
                 }
                 self.drawingView = nil;
                 //Save Image Coding Ends

@@ -188,6 +188,12 @@ static inline CGFloat zoomScaleThatFits(CGSize target, CGSize source)
 	return self;
 }
 
+- (void)setContentDrawingImageView:(UIImage *) drawingImage
+{
+    [theContentPage showDrawingView:drawingImage];
+    
+}
+
 - (void)dealloc
 {
 	[self removeObserver:self forKeyPath:@"frame" context:LazyPDFContentViewContext];
