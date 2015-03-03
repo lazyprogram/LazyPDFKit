@@ -52,7 +52,7 @@
 - (void)zoomIncrement:(UITapGestureRecognizer *)recognizer;
 - (void)zoomDecrement:(UITapGestureRecognizer *)recognizer;
 - (void)zoomResetAnimated:(BOOL)animated;
-
+- (void) setContentDrawingImageView:(UIImage *) drawingImage;
 @end
 
 #pragma mark -

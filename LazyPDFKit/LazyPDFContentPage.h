@@ -24,12 +24,17 @@
 
 
 #import <UIKit/UIKit.h>
+#import "LazyPDFDrawingView.h"
 
 @interface LazyPDFContentPage : UIView
 
 - (instancetype)initWithURL:(NSURL *)fileURL page:(NSInteger)page password:(NSString *)phrase;
 
 - (id)processSingleTap:(UITapGestureRecognizer *)recognizer;
+
+- (void)showDrawingView:(UIImage *)image;
+- (void)hideDrawingView;
+- (UIImage *)getDrawingImage;
 
 @end
 

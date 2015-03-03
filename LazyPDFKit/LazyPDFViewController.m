@@ -40,6 +40,7 @@
 #import "LazyPDFMainToolbar.h"
 #import "LazyPDFMainPagebar.h"
 #import "LazyPDFDrawToolbar.h"
+#import "LazyPDFDataManager.h"
 
 
 @interface LazyPDFViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate, MFMailComposeViewControllerDelegate, UIDocumentInteractionControllerDelegate,
@@ -157,6 +158,9 @@
 	contentView.message = self; [contentViews setObject:contentView forKey:[NSNumber numberWithInteger:page]]; [scrollView addSubview:contentView];
 
 	[contentView showPageThumb:fileURL page:page password:phrase guid:guid]; // Request page preview thumb
+    
+    UIImage *image = [[LazyPDFDataManager sharedInstance] getAnnotationImage:[document filePath] withPage:[NSNumber numberWithInteger:page]];
+    [contentView setContentDrawingImageView:image];
 }
 
 - (void)layoutContentViews:(UIScrollView *)scrollView
@@ -252,7 +256,9 @@
 	{
 		if ((page < minimumPage) || (page > maximumPage)) return;
 
-		currentPage = page; document.pageNumber = [NSNumber numberWithInteger:page];
+        [self saveAnnotation];
+        
+        currentPage = page; document.pageNumber = [NSNumber numberWithInteger:page];
 
 		CGPoint contentOffset = CGPointMake((theScrollView.bounds.size.width * (page - 1)), 0.0f);
 
@@ -746,6 +752,7 @@
 
 - (void)tappedInToolbar:(LazyPDFMainToolbar *)toolbar doneButton:(UIButton *)button
 {
+    [self saveAnnotation];
 #if (LazyPDF_STANDALONE == FALSE) // Option
 
 	[self closeDocument]; // Close LazyPDFViewController
@@ -983,12 +990,16 @@
                 if([subview2 isKindOfClass:[LazyPDFContentPage class]]){
                     subview2.userInteractionEnabled = YES;
                     LazyPDFContentPage *contentPage = (LazyPDFContentPage *)subview2;
-                    if (self.drawingView==nil && button.tag<=7){
+                    [contentPage hideDrawingView];
+                    if (self.drawingView==nil && button.tag<=8){
                         //only edit mode buttons till circle fill
                         self.drawingView = [[LazyPDFDrawingView alloc] initWithFrame:contentPage.frame];
-                        
+                        UIImage *drawingImage = [contentPage getDrawingImage];
+                        if(drawingImage!=nil){
+                            [self.drawingView loadImage:drawingImage];
+                        }
                     }else{
-                        if ((button.tag==1 && self.drawingView.drawTool == LazyPDFDrawingToolTypePen) || (button.tag==2 && self.drawingView.drawTool == LazyPDFDrawingToolTypeText) || (button.tag==3 && self.drawingView.drawTool == LazyPDFDrawingToolTypeRectagleFill) || (button.tag==4 && self.drawingView.drawTool == LazyPDFDrawingToolTypeLine) || (button.tag==5 && self.drawingView.drawTool == LazyPDFDrawingToolTypeRectagleStroke) || (button.tag==6 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEllipseStroke) || (button.tag==7 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEllipseFill)) {
+                        if ((button.tag==1 && self.drawingView.drawTool == LazyPDFDrawingToolTypePen) || (button.tag==2 && self.drawingView.drawTool == LazyPDFDrawingToolTypeText) || (button.tag==3 && self.drawingView.drawTool == LazyPDFDrawingToolTypeRectagleFill) || (button.tag==4 && self.drawingView.drawTool == LazyPDFDrawingToolTypeLine) || (button.tag==5 && self.drawingView.drawTool == LazyPDFDrawingToolTypeRectagleStroke) || (button.tag==6 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEllipseStroke) || (button.tag==7 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEllipseFill) || (button.tag==8 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEraser)) {
                             [self saveAnnotation];
                         }
                     }
@@ -1073,6 +1084,8 @@
 }
 - (void)saveAnnotation
 {
+    [drawToolbar clearButtonSelection:8];
+    
     LazyPDFContentView *theDrawView = (LazyPDFContentView *)[contentViews objectForKey:[NSNumber numberWithInteger:currentPage]];
     [theDrawView setScrollEnabled:YES];
     for (UIView *subview in theDrawView.subviews)
@@ -1087,14 +1100,23 @@
                     //Save Image Coding Starts
                     if (![self isBlankImage:self.drawingView.image] && self.drawingView.image!=nil) {
                         //[contentPage showDrawingView:self.drawingView.image];
-                        [contentPage addSubview:self.drawingView];
-                        /*
-                         [self.drawingView removeFromSuperview];
-                         subview2.userInteractionEnabled = NO;
-                         subview.userInteractionEnabled = NO;
-                         [theScrollView setScrollEnabled:YES];*/
+                        //[contentPage addSubview:self.drawingView];
                         
+                        NSMutableDictionary *annotDict = [NSMutableDictionary new];
+                        NSData *image = UIImagePNGRepresentation(self.drawingView.image);
+                        [annotDict setValue:image forKey:@"image"];
+                        [annotDict setValue:[NSNumber numberWithInteger:currentPage] forKey:@"page"];
+                        
+                        [annotDict setValue:[document fileDate] forKey:@"fileDate"];
+                        [annotDict setValue:[document fileSize] forKey:@"fileSize"];
+                        [annotDict setValue:[document pageCount] forKey:@"pageCount"];
+                        [annotDict setValue:[document filePath] forKey:@"filePath"];
+                        
+                        [[LazyPDFDataManager sharedInstance] addAnnotation:annotDict];
+                        annotDict = nil;
                     }
+                    [contentPage showDrawingView:self.drawingView.image];
+                    [self.drawingView removeFromSuperview];
                 }
                 self.drawingView = nil;
                 //Save Image Coding Ends

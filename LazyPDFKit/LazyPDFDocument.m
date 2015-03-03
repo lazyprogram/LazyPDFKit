@@ -30,7 +30,6 @@
 @interface LazyPDFDocument ()
 
 @property (nonatomic, strong, readwrite) NSString *password;
-@property (nonatomic, strong, readwrite) NSString *filePath;
 
 @end
 
