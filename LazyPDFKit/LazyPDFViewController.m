@@ -256,7 +256,9 @@
 	{
 		if ((page < minimumPage) || (page > maximumPage)) return;
 
-		currentPage = page; document.pageNumber = [NSNumber numberWithInteger:page];
+        [self saveAnnotation];
+        
+        currentPage = page; document.pageNumber = [NSNumber numberWithInteger:page];
 
 		CGPoint contentOffset = CGPointMake((theScrollView.bounds.size.width * (page - 1)), 0.0f);
 
@@ -750,6 +752,7 @@
 
 - (void)tappedInToolbar:(LazyPDFMainToolbar *)toolbar doneButton:(UIButton *)button
 {
+    [self saveAnnotation];
 #if (LazyPDF_STANDALONE == FALSE) // Option
 
 	[self closeDocument]; // Close LazyPDFViewController
@@ -988,7 +991,7 @@
                     subview2.userInteractionEnabled = YES;
                     LazyPDFContentPage *contentPage = (LazyPDFContentPage *)subview2;
                     [contentPage hideDrawingView];
-                    if (self.drawingView==nil && button.tag<=7){
+                    if (self.drawingView==nil && button.tag<=8){
                         //only edit mode buttons till circle fill
                         self.drawingView = [[LazyPDFDrawingView alloc] initWithFrame:contentPage.frame];
                         UIImage *drawingImage = [contentPage getDrawingImage];
@@ -996,7 +999,7 @@
                             [self.drawingView loadImage:drawingImage];
                         }
                     }else{
-                        if ((button.tag==1 && self.drawingView.drawTool == LazyPDFDrawingToolTypePen) || (button.tag==2 && self.drawingView.drawTool == LazyPDFDrawingToolTypeText) || (button.tag==3 && self.drawingView.drawTool == LazyPDFDrawingToolTypeRectagleFill) || (button.tag==4 && self.drawingView.drawTool == LazyPDFDrawingToolTypeLine) || (button.tag==5 && self.drawingView.drawTool == LazyPDFDrawingToolTypeRectagleStroke) || (button.tag==6 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEllipseStroke) || (button.tag==7 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEllipseFill)) {
+                        if ((button.tag==1 && self.drawingView.drawTool == LazyPDFDrawingToolTypePen) || (button.tag==2 && self.drawingView.drawTool == LazyPDFDrawingToolTypeText) || (button.tag==3 && self.drawingView.drawTool == LazyPDFDrawingToolTypeRectagleFill) || (button.tag==4 && self.drawingView.drawTool == LazyPDFDrawingToolTypeLine) || (button.tag==5 && self.drawingView.drawTool == LazyPDFDrawingToolTypeRectagleStroke) || (button.tag==6 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEllipseStroke) || (button.tag==7 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEllipseFill) || (button.tag==8 && self.drawingView.drawTool == LazyPDFDrawingToolTypeEraser)) {
                             [self saveAnnotation];
                         }
                     }
@@ -1081,6 +1084,8 @@
 }
 - (void)saveAnnotation
 {
+    [drawToolbar clearButtonSelection:8];
+    
     LazyPDFContentView *theDrawView = (LazyPDFContentView *)[contentViews objectForKey:[NSNumber numberWithInteger:currentPage]];
     [theDrawView setScrollEnabled:YES];
     for (UIView *subview in theDrawView.subviews)
