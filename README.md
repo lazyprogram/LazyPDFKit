@@ -1,5 +1,5 @@
 # LazyPDFKit - Under Development
-An IOS PDF Framework written in Objective-C
+An IOS Open Source PDF Framework written in Objective-C
 
 ![Screenshot1](/../master/Screenshots/Screenshot1.png?raw=true "Screenshot1")
 
