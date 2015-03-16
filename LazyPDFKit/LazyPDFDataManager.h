@@ -25,4 +25,5 @@
 - (File *)getFileByPath:(NSString *)filePath;
 - (Annotation *)getAnnotation:(NSString *)filePath withPage:(NSNumber *)page;
 - (UIImage *)getAnnotationImage:(NSString *)filePath withPage:(NSNumber *)page;
+- (void)deleteFileByPath:(NSString *)filePath;
 @end

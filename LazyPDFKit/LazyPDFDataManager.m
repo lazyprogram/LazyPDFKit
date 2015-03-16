@@ -212,4 +212,12 @@ static LazyPDFDataManager *instance = nil;
     }
     return image;
 }
+- (void)deleteFileByPath:(NSString *)filePath
+{
+    File *file = [self getFileByPath:filePath];
+    if (file!=nil) {
+        [self.managedObjectContext deleteObject:file];
+        [self saveContext];
+    }
+}
 @end
