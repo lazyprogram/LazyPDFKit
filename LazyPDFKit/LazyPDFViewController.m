@@ -847,7 +847,7 @@ LazyPDFMainToolbarDelegate, LazyPDFMainPagebarDelegate, LazyPDFContentViewDelega
         NSLog(@"File not saved");
     }else{
         [[LazyPDFDataManager sharedInstance] deleteFileByPath:[document filePath]];
-        NSLog(@"File saved");
+        NSLog(@"File saved : %@",[document filePath]);
     }
 }
 
