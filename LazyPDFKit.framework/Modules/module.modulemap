@@ -1,0 +1,6 @@
+framework module LazyPDFKit {
+  umbrella header "LazyPDFKit.h"
+
+  export *
+  module * { export * }
+}
