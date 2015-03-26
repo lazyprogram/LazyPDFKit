@@ -23,7 +23,9 @@ Step 1 : Drag and Drop the LazyPDFKit.framework to your project
 
 Step 2 : Enable 'Copy items if needed'
 
-Step 3 : Implement it
+Step 3 : Add to General -> Embedded Binaries
+
+Step 4 : Implement it
 
 ```
 #import <LazyPDFKit/LazyPDFKit.h>
