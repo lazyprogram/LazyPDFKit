@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		902D25581AC3A4A800BADF2C /* LazyPDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902D25571AC3A4A800BADF2C /* LazyPDFKit.framework */; };
-		902D255A1AC3A4B300BADF2C /* LazyPDFKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 902D25571AC3A4A800BADF2C /* LazyPDFKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		902D28511AC3D1B900BADF2C /* LazyPDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902D28501AC3D1B900BADF2C /* LazyPDFKit.framework */; };
+		902D28521AC3D1BF00BADF2C /* LazyPDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902D28501AC3D1B900BADF2C /* LazyPDFKit.framework */; };
+		902D28531AC3D1BF00BADF2C /* LazyPDFKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 902D28501AC3D1B900BADF2C /* LazyPDFKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		903315181AB6B443000F80F6 /* Document.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 903315171AB6B443000F80F6 /* Document.pdf */; };
 		90483AD11AB6B2A800E62E60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90483AD01AB6B2A800E62E60 /* main.m */; };
 		90483AD41AB6B2A800E62E60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90483AD31AB6B2A800E62E60 /* AppDelegate.m */; };
@@ -36,7 +37,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				902D255A1AC3A4B300BADF2C /* LazyPDFKit.framework in Embed Frameworks */,
+				902D28531AC3D1BF00BADF2C /* LazyPDFKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,7 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		902D25571AC3A4A800BADF2C /* LazyPDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LazyPDFKit.framework; sourceTree = "<group>"; };
+		902D28501AC3D1B900BADF2C /* LazyPDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LazyPDFKit.framework; sourceTree = "<group>"; };
 		903315171AB6B443000F80F6 /* Document.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Document.pdf; sourceTree = "<group>"; };
 		90483ACB1AB6B2A800E62E60 /* LazyPDFKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPDFKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90483ACF1AB6B2A800E62E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,7 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				902D25581AC3A4A800BADF2C /* LazyPDFKit.framework in Frameworks */,
+				902D28521AC3D1BF00BADF2C /* LazyPDFKit.framework in Frameworks */,
+				902D28511AC3D1B900BADF2C /* LazyPDFKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +85,7 @@
 		90483AC21AB6B2A800E62E60 = {
 			isa = PBXGroup;
 			children = (
-				902D25571AC3A4A800BADF2C /* LazyPDFKit.framework */,
+				902D28501AC3D1B900BADF2C /* LazyPDFKit.framework */,
 				90483ACD1AB6B2A800E62E60 /* LazyPDFKitDemo */,
 				90483AE71AB6B2A800E62E60 /* LazyPDFKitDemoTests */,
 				90483ACC1AB6B2A800E62E60 /* Products */,
