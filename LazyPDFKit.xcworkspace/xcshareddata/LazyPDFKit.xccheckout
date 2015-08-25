@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>517576BF-A86A-4A80-8296-25EE30BD59ED</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LazyPDFKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E034296E1F99127E376A5A231EEF1D9DE518AAC8</key>
+		<string>https://bitbucket.org/lazyprogram/lazypdfkit.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LazyPDFKit.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E034296E1F99127E376A5A231EEF1D9DE518AAC8</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/lazyprogram/lazypdfkit.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E034296E1F99127E376A5A231EEF1D9DE518AAC8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E034296E1F99127E376A5A231EEF1D9DE518AAC8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>lazypdfkit2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

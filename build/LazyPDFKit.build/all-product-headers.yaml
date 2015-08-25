@@ -1,0 +1,223 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/ctepv1/Library/Developer/Xcode/DerivedData/LazyPDFKit-cdrlsotaeezipbexcmmjddzswhnf/Build/Products/Debug-iphonesimulator/LazyPDFKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "ARCMacros.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/ARCMacros.h"
+        },
+        {
+          'type': 'file',
+          'name': "Annotation.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/Annotation.h"
+        },
+        {
+          'type': 'file',
+          'name': "CGPDFDocument.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/CGPDFDocument.h"
+        },
+        {
+          'type': 'file',
+          'name': "File.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/File.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFColorBarPicker.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFColorBarPicker.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFColorIndicatorView.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFColorIndicatorView.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFColorPicker.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFColorPicker.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFColorPickerController.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFColorPickerController.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFColorPickerNavigationController.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFColorPickerNavigationController.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFColorSquarePicker.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFColorSquarePicker.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFConstants.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFContentPage.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFContentPage.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFContentTile.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFContentTile.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFContentView.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFContentView.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFDocument.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFDocument.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFDocumentOutline.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFDocumentOutline.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFDrawToolbar.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFDrawToolbar.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFDrawingTools.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFDrawingTools.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFDrawingView.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFDrawingView.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFHSBSupport.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFHSBSupport.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFKit-Swift.h",
+          'external-contents': "/Users/ctepv1/Library/Developer/Xcode/DerivedData/LazyPDFKit-cdrlsotaeezipbexcmmjddzswhnf/Build/Products/Debug-iphonesimulator/LazyPDFKit.framework/Headers/LazyPDFKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFKit.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFKit.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFMainPagebar.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFMainPagebar.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFMainToolbar.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFMainToolbar.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFPopoverController.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFPopoverController.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFPopoverView.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFPopoverView.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFPropertyController.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFPropertyController.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFSourceColorView.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFSourceColorView.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFThumbCache.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFThumbCache.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFThumbFetch.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFThumbFetch.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFThumbQueue.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFThumbQueue.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFThumbRender.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFThumbRender.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFThumbRequest.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFThumbRequest.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFThumbView.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFThumbView.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFThumbsView.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFThumbsView.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFTouchView.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFTouchView.h"
+        },
+        {
+          'type': 'file',
+          'name': "LazyPDFViewController.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/LazyPDFViewController.h"
+        },
+        {
+          'type': 'file',
+          'name': "ThumbsMainToolbar.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/ThumbsMainToolbar.h"
+        },
+        {
+          'type': 'file',
+          'name': "ThumbsViewController.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/ThumbsViewController.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIXToolbarView.h",
+          'external-contents': "/Users/ctepv1/Desktop/lazypdfkit2/LazyPDFKit/UIXToolbarView.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/ctepv1/Library/Developer/Xcode/DerivedData/LazyPDFKit-cdrlsotaeezipbexcmmjddzswhnf/Build/Products/Debug-iphonesimulator/LazyPDFKit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/ctepv1/Library/Developer/Xcode/DerivedData/LazyPDFKit-cdrlsotaeezipbexcmmjddzswhnf/Build/Products/Debug-iphonesimulator/LazyPDFKit.framework/Modules/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

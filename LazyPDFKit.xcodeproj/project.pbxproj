@@ -1,0 +1,1177 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		90D421411AC3943800D3CE2A /* LazyPDFKitFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 90D421441AC3943800D3CE2A /* Build configuration list for PBXAggregateTarget "LazyPDFKitFramework" */;
+			buildPhases = (
+				90D421451AC3945C00D3CE2A /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = LazyPDFKitFramework;
+			productName = LazyPDFKitFramework;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		904838501AB6A8C600E62E60 /* LazyPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048384F1AB6A8C600E62E60 /* LazyPDFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904838561AB6A8C600E62E60 /* LazyPDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9048384A1AB6A8C600E62E60 /* LazyPDFKit.framework */; };
+		9048385D1AB6A8C600E62E60 /* LazyPDFKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048385C1AB6A8C600E62E60 /* LazyPDFKitTests.m */; };
+		9048397C1AB6A9B900E62E60 /* Annotation.h in Headers */ = {isa = PBXBuildFile; fileRef = 904838FE1AB6A9B900E62E60 /* Annotation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9048397D1AB6A9B900E62E60 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 904838FF1AB6A9B900E62E60 /* Annotation.m */; };
+		9048397E1AB6A9B900E62E60 /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 904838FF1AB6A9B900E62E60 /* Annotation.m */; };
+		9048397F1AB6A9B900E62E60 /* ARCMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839001AB6A9B900E62E60 /* ARCMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839801AB6A9B900E62E60 /* CGPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839011AB6A9B900E62E60 /* CGPDFDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839811AB6A9B900E62E60 /* CGPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839021AB6A9B900E62E60 /* CGPDFDocument.m */; };
+		904839821AB6A9B900E62E60 /* CGPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839021AB6A9B900E62E60 /* CGPDFDocument.m */; };
+		904839831AB6A9B900E62E60 /* circle-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839031AB6A9B900E62E60 /* circle-but.png */; };
+		904839841AB6A9B900E62E60 /* circle-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839031AB6A9B900E62E60 /* circle-but.png */; };
+		904839851AB6A9B900E62E60 /* circle-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839041AB6A9B900E62E60 /* circle-but@2x.png */; };
+		904839861AB6A9B900E62E60 /* circle-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839041AB6A9B900E62E60 /* circle-but@2x.png */; };
+		904839871AB6A9B900E62E60 /* circlefill-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839051AB6A9B900E62E60 /* circlefill-but.png */; };
+		904839881AB6A9B900E62E60 /* circlefill-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839051AB6A9B900E62E60 /* circlefill-but.png */; };
+		904839891AB6A9B900E62E60 /* circlefill-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839061AB6A9B900E62E60 /* circlefill-but@2x.png */; };
+		9048398A1AB6A9B900E62E60 /* circlefill-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839061AB6A9B900E62E60 /* circlefill-but@2x.png */; };
+		9048398B1AB6A9B900E62E60 /* clear-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839071AB6A9B900E62E60 /* clear-but.png */; };
+		9048398C1AB6A9B900E62E60 /* clear-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839071AB6A9B900E62E60 /* clear-but.png */; };
+		9048398D1AB6A9B900E62E60 /* clear-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839081AB6A9B900E62E60 /* clear-but@2x.png */; };
+		9048398E1AB6A9B900E62E60 /* clear-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839081AB6A9B900E62E60 /* clear-but@2x.png */; };
+		9048398F1AB6A9B900E62E60 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839091AB6A9B900E62E60 /* Default-568h@2x.png */; };
+		904839901AB6A9B900E62E60 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839091AB6A9B900E62E60 /* Default-568h@2x.png */; };
+		904839911AB6A9B900E62E60 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390A1AB6A9B900E62E60 /* Default-667h@2x.png */; };
+		904839921AB6A9B900E62E60 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390A1AB6A9B900E62E60 /* Default-667h@2x.png */; };
+		904839931AB6A9B900E62E60 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390B1AB6A9B900E62E60 /* Default-736h@3x.png */; };
+		904839941AB6A9B900E62E60 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390B1AB6A9B900E62E60 /* Default-736h@3x.png */; };
+		904839951AB6A9B900E62E60 /* done-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390C1AB6A9B900E62E60 /* done-but.png */; };
+		904839961AB6A9B900E62E60 /* done-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390C1AB6A9B900E62E60 /* done-but.png */; };
+		904839971AB6A9B900E62E60 /* done-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390D1AB6A9B900E62E60 /* done-but@2x.png */; };
+		904839981AB6A9B900E62E60 /* done-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390D1AB6A9B900E62E60 /* done-but@2x.png */; };
+		904839991AB6A9B900E62E60 /* eraser-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390E1AB6A9B900E62E60 /* eraser-but.png */; };
+		9048399A1AB6A9B900E62E60 /* eraser-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390E1AB6A9B900E62E60 /* eraser-but.png */; };
+		9048399B1AB6A9B900E62E60 /* eraser-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390F1AB6A9B900E62E60 /* eraser-but@2x.png */; };
+		9048399C1AB6A9B900E62E60 /* eraser-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048390F1AB6A9B900E62E60 /* eraser-but@2x.png */; };
+		9048399D1AB6A9B900E62E60 /* File.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839101AB6A9B900E62E60 /* File.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9048399E1AB6A9B900E62E60 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839111AB6A9B900E62E60 /* File.m */; };
+		9048399F1AB6A9B900E62E60 /* File.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839111AB6A9B900E62E60 /* File.m */; };
+		904839A01AB6A9B900E62E60 /* LazyPDF-Button-H.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839121AB6A9B900E62E60 /* LazyPDF-Button-H.png */; };
+		904839A11AB6A9B900E62E60 /* LazyPDF-Button-H.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839121AB6A9B900E62E60 /* LazyPDF-Button-H.png */; };
+		904839A21AB6A9B900E62E60 /* LazyPDF-Button-H@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839131AB6A9B900E62E60 /* LazyPDF-Button-H@2x.png */; };
+		904839A31AB6A9B900E62E60 /* LazyPDF-Button-H@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839131AB6A9B900E62E60 /* LazyPDF-Button-H@2x.png */; };
+		904839A41AB6A9B900E62E60 /* LazyPDF-Button-N.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839141AB6A9B900E62E60 /* LazyPDF-Button-N.png */; };
+		904839A51AB6A9B900E62E60 /* LazyPDF-Button-N.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839141AB6A9B900E62E60 /* LazyPDF-Button-N.png */; };
+		904839A61AB6A9B900E62E60 /* LazyPDF-Button-N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839151AB6A9B900E62E60 /* LazyPDF-Button-N@2x.png */; };
+		904839A71AB6A9B900E62E60 /* LazyPDF-Button-N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839151AB6A9B900E62E60 /* LazyPDF-Button-N@2x.png */; };
+		904839A81AB6A9B900E62E60 /* LazyPDF-Email.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839161AB6A9B900E62E60 /* LazyPDF-Email.png */; };
+		904839A91AB6A9B900E62E60 /* LazyPDF-Email.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839161AB6A9B900E62E60 /* LazyPDF-Email.png */; };
+		904839AA1AB6A9B900E62E60 /* LazyPDF-Email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839171AB6A9B900E62E60 /* LazyPDF-Email@2x.png */; };
+		904839AB1AB6A9B900E62E60 /* LazyPDF-Email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839171AB6A9B900E62E60 /* LazyPDF-Email@2x.png */; };
+		904839AC1AB6A9B900E62E60 /* LazyPDF-Export.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839181AB6A9B900E62E60 /* LazyPDF-Export.png */; };
+		904839AD1AB6A9B900E62E60 /* LazyPDF-Export.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839181AB6A9B900E62E60 /* LazyPDF-Export.png */; };
+		904839AE1AB6A9B900E62E60 /* LazyPDF-Export@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839191AB6A9B900E62E60 /* LazyPDF-Export@2x.png */; };
+		904839AF1AB6A9B900E62E60 /* LazyPDF-Export@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839191AB6A9B900E62E60 /* LazyPDF-Export@2x.png */; };
+		904839B01AB6A9B900E62E60 /* LazyPDF-Mark-N.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391A1AB6A9B900E62E60 /* LazyPDF-Mark-N.png */; };
+		904839B11AB6A9B900E62E60 /* LazyPDF-Mark-N.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391A1AB6A9B900E62E60 /* LazyPDF-Mark-N.png */; };
+		904839B21AB6A9B900E62E60 /* LazyPDF-Mark-N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391B1AB6A9B900E62E60 /* LazyPDF-Mark-N@2x.png */; };
+		904839B31AB6A9B900E62E60 /* LazyPDF-Mark-N@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391B1AB6A9B900E62E60 /* LazyPDF-Mark-N@2x.png */; };
+		904839B41AB6A9B900E62E60 /* LazyPDF-Mark-Y.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391C1AB6A9B900E62E60 /* LazyPDF-Mark-Y.png */; };
+		904839B51AB6A9B900E62E60 /* LazyPDF-Mark-Y.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391C1AB6A9B900E62E60 /* LazyPDF-Mark-Y.png */; };
+		904839B61AB6A9B900E62E60 /* LazyPDF-Mark-Y@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391D1AB6A9B900E62E60 /* LazyPDF-Mark-Y@2x.png */; };
+		904839B71AB6A9B900E62E60 /* LazyPDF-Mark-Y@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391D1AB6A9B900E62E60 /* LazyPDF-Mark-Y@2x.png */; };
+		904839B81AB6A9B900E62E60 /* LazyPDF-Print.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391E1AB6A9B900E62E60 /* LazyPDF-Print.png */; };
+		904839B91AB6A9B900E62E60 /* LazyPDF-Print.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391E1AB6A9B900E62E60 /* LazyPDF-Print.png */; };
+		904839BA1AB6A9B900E62E60 /* LazyPDF-Print@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391F1AB6A9B900E62E60 /* LazyPDF-Print@2x.png */; };
+		904839BB1AB6A9B900E62E60 /* LazyPDF-Print@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048391F1AB6A9B900E62E60 /* LazyPDF-Print@2x.png */; };
+		904839BC1AB6A9B900E62E60 /* LazyPDF-Thumbs.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839201AB6A9B900E62E60 /* LazyPDF-Thumbs.png */; };
+		904839BD1AB6A9B900E62E60 /* LazyPDF-Thumbs.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839201AB6A9B900E62E60 /* LazyPDF-Thumbs.png */; };
+		904839BE1AB6A9B900E62E60 /* LazyPDF-Thumbs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839211AB6A9B900E62E60 /* LazyPDF-Thumbs@2x.png */; };
+		904839BF1AB6A9B900E62E60 /* LazyPDF-Thumbs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839211AB6A9B900E62E60 /* LazyPDF-Thumbs@2x.png */; };
+		904839C01AB6A9B900E62E60 /* LazyPDFColorBarPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839221AB6A9B900E62E60 /* LazyPDFColorBarPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839C11AB6A9B900E62E60 /* LazyPDFColorBarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839231AB6A9B900E62E60 /* LazyPDFColorBarPicker.m */; };
+		904839C21AB6A9B900E62E60 /* LazyPDFColorBarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839231AB6A9B900E62E60 /* LazyPDFColorBarPicker.m */; };
+		904839C31AB6A9B900E62E60 /* LazyPDFColorIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839241AB6A9B900E62E60 /* LazyPDFColorIndicatorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839C41AB6A9B900E62E60 /* LazyPDFColorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839251AB6A9B900E62E60 /* LazyPDFColorIndicatorView.m */; };
+		904839C51AB6A9B900E62E60 /* LazyPDFColorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839251AB6A9B900E62E60 /* LazyPDFColorIndicatorView.m */; };
+		904839C61AB6A9B900E62E60 /* LazyPDFColorPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839261AB6A9B900E62E60 /* LazyPDFColorPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839C71AB6A9B900E62E60 /* LazyPDFColorPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839271AB6A9B900E62E60 /* LazyPDFColorPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839C81AB6A9B900E62E60 /* LazyPDFColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839281AB6A9B900E62E60 /* LazyPDFColorPickerController.m */; };
+		904839C91AB6A9B900E62E60 /* LazyPDFColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839281AB6A9B900E62E60 /* LazyPDFColorPickerController.m */; };
+		904839CA1AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839291AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839CB1AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048392A1AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.m */; };
+		904839CC1AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048392A1AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.m */; };
+		904839CD1AB6A9B900E62E60 /* LazyPDFColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9048392B1AB6A9B900E62E60 /* LazyPDFColorPickerView.xib */; };
+		904839CE1AB6A9B900E62E60 /* LazyPDFColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9048392B1AB6A9B900E62E60 /* LazyPDFColorPickerView.xib */; };
+		904839CF1AB6A9B900E62E60 /* LazyPDFColorSquarePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048392C1AB6A9B900E62E60 /* LazyPDFColorSquarePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839D01AB6A9B900E62E60 /* LazyPDFColorSquarePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048392D1AB6A9B900E62E60 /* LazyPDFColorSquarePicker.m */; };
+		904839D11AB6A9B900E62E60 /* LazyPDFColorSquarePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048392D1AB6A9B900E62E60 /* LazyPDFColorSquarePicker.m */; };
+		904839D21AB6A9B900E62E60 /* LazyPDFConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048392E1AB6A9B900E62E60 /* LazyPDFConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839D31AB6A9B900E62E60 /* LazyPDFConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048392F1AB6A9B900E62E60 /* LazyPDFConstants.m */; };
+		904839D41AB6A9B900E62E60 /* LazyPDFConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048392F1AB6A9B900E62E60 /* LazyPDFConstants.m */; };
+		904839D51AB6A9B900E62E60 /* LazyPDFContentPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839301AB6A9B900E62E60 /* LazyPDFContentPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839D61AB6A9B900E62E60 /* LazyPDFContentPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839311AB6A9B900E62E60 /* LazyPDFContentPage.m */; };
+		904839D71AB6A9B900E62E60 /* LazyPDFContentPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839311AB6A9B900E62E60 /* LazyPDFContentPage.m */; };
+		904839D81AB6A9B900E62E60 /* LazyPDFContentTile.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839321AB6A9B900E62E60 /* LazyPDFContentTile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839D91AB6A9B900E62E60 /* LazyPDFContentTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839331AB6A9B900E62E60 /* LazyPDFContentTile.m */; };
+		904839DA1AB6A9B900E62E60 /* LazyPDFContentTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839331AB6A9B900E62E60 /* LazyPDFContentTile.m */; };
+		904839DB1AB6A9B900E62E60 /* LazyPDFContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839341AB6A9B900E62E60 /* LazyPDFContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839DC1AB6A9B900E62E60 /* LazyPDFContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839351AB6A9B900E62E60 /* LazyPDFContentView.m */; };
+		904839DD1AB6A9B900E62E60 /* LazyPDFContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839351AB6A9B900E62E60 /* LazyPDFContentView.m */; };
+		904839DE1AB6A9B900E62E60 /* LazyPDFDataManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839361AB6A9B900E62E60 /* LazyPDFDataManager.h */; };
+		904839DF1AB6A9B900E62E60 /* LazyPDFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839371AB6A9B900E62E60 /* LazyPDFDataManager.m */; };
+		904839E01AB6A9B900E62E60 /* LazyPDFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839371AB6A9B900E62E60 /* LazyPDFDataManager.m */; };
+		904839E11AB6A9B900E62E60 /* LazyPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839381AB6A9B900E62E60 /* LazyPDFDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839E21AB6A9B900E62E60 /* LazyPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839391AB6A9B900E62E60 /* LazyPDFDocument.m */; };
+		904839E31AB6A9B900E62E60 /* LazyPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839391AB6A9B900E62E60 /* LazyPDFDocument.m */; };
+		904839E41AB6A9B900E62E60 /* LazyPDFDocumentOutline.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048393A1AB6A9B900E62E60 /* LazyPDFDocumentOutline.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839E51AB6A9B900E62E60 /* LazyPDFDocumentOutline.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048393B1AB6A9B900E62E60 /* LazyPDFDocumentOutline.m */; };
+		904839E61AB6A9B900E62E60 /* LazyPDFDocumentOutline.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048393B1AB6A9B900E62E60 /* LazyPDFDocumentOutline.m */; };
+		904839E71AB6A9B900E62E60 /* LazyPDFDrawingTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048393C1AB6A9B900E62E60 /* LazyPDFDrawingTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839E81AB6A9B900E62E60 /* LazyPDFDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048393D1AB6A9B900E62E60 /* LazyPDFDrawingTools.m */; };
+		904839E91AB6A9B900E62E60 /* LazyPDFDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048393D1AB6A9B900E62E60 /* LazyPDFDrawingTools.m */; };
+		904839EA1AB6A9B900E62E60 /* LazyPDFDrawingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048393E1AB6A9B900E62E60 /* LazyPDFDrawingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839EB1AB6A9B900E62E60 /* LazyPDFDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048393F1AB6A9B900E62E60 /* LazyPDFDrawingView.m */; };
+		904839EC1AB6A9B900E62E60 /* LazyPDFDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048393F1AB6A9B900E62E60 /* LazyPDFDrawingView.m */; };
+		904839ED1AB6A9B900E62E60 /* LazyPDFDrawToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839401AB6A9B900E62E60 /* LazyPDFDrawToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839EE1AB6A9B900E62E60 /* LazyPDFDrawToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839411AB6A9B900E62E60 /* LazyPDFDrawToolbar.m */; };
+		904839EF1AB6A9B900E62E60 /* LazyPDFDrawToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839411AB6A9B900E62E60 /* LazyPDFDrawToolbar.m */; };
+		904839F01AB6A9B900E62E60 /* LazyPDFHSBSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839421AB6A9B900E62E60 /* LazyPDFHSBSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839F11AB6A9B900E62E60 /* LazyPDFHSBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839431AB6A9B900E62E60 /* LazyPDFHSBSupport.m */; };
+		904839F21AB6A9B900E62E60 /* LazyPDFHSBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839431AB6A9B900E62E60 /* LazyPDFHSBSupport.m */; };
+		904839F31AB6A9B900E62E60 /* LazyPDFMainPagebar.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839441AB6A9B900E62E60 /* LazyPDFMainPagebar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839F41AB6A9B900E62E60 /* LazyPDFMainPagebar.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839451AB6A9B900E62E60 /* LazyPDFMainPagebar.m */; };
+		904839F51AB6A9B900E62E60 /* LazyPDFMainPagebar.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839451AB6A9B900E62E60 /* LazyPDFMainPagebar.m */; };
+		904839F61AB6A9B900E62E60 /* LazyPDFMainToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839461AB6A9B900E62E60 /* LazyPDFMainToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839F71AB6A9B900E62E60 /* LazyPDFMainToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839471AB6A9B900E62E60 /* LazyPDFMainToolbar.m */; };
+		904839F81AB6A9B900E62E60 /* LazyPDFMainToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839471AB6A9B900E62E60 /* LazyPDFMainToolbar.m */; };
+		904839F91AB6A9B900E62E60 /* LazyPDFModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 904839481AB6A9B900E62E60 /* LazyPDFModel.xcdatamodeld */; };
+		904839FA1AB6A9B900E62E60 /* LazyPDFModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 904839481AB6A9B900E62E60 /* LazyPDFModel.xcdatamodeld */; };
+		904839FB1AB6A9B900E62E60 /* LazyPDFPopoverController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048394A1AB6A9B900E62E60 /* LazyPDFPopoverController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839FC1AB6A9B900E62E60 /* LazyPDFPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048394B1AB6A9B900E62E60 /* LazyPDFPopoverController.m */; };
+		904839FD1AB6A9B900E62E60 /* LazyPDFPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048394B1AB6A9B900E62E60 /* LazyPDFPopoverController.m */; };
+		904839FE1AB6A9B900E62E60 /* LazyPDFPopoverView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048394C1AB6A9B900E62E60 /* LazyPDFPopoverView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		904839FF1AB6A9B900E62E60 /* LazyPDFPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048394D1AB6A9B900E62E60 /* LazyPDFPopoverView.m */; };
+		90483A001AB6A9B900E62E60 /* LazyPDFPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048394D1AB6A9B900E62E60 /* LazyPDFPopoverView.m */; };
+		90483A011AB6A9B900E62E60 /* LazyPDFPropertyController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048394E1AB6A9B900E62E60 /* LazyPDFPropertyController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A021AB6A9B900E62E60 /* LazyPDFPropertyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048394F1AB6A9B900E62E60 /* LazyPDFPropertyController.m */; };
+		90483A031AB6A9B900E62E60 /* LazyPDFPropertyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048394F1AB6A9B900E62E60 /* LazyPDFPropertyController.m */; };
+		90483A041AB6A9B900E62E60 /* LazyPDFSourceColorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839501AB6A9B900E62E60 /* LazyPDFSourceColorView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A051AB6A9B900E62E60 /* LazyPDFSourceColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839511AB6A9B900E62E60 /* LazyPDFSourceColorView.m */; };
+		90483A061AB6A9B900E62E60 /* LazyPDFSourceColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839511AB6A9B900E62E60 /* LazyPDFSourceColorView.m */; };
+		90483A071AB6A9B900E62E60 /* LazyPDFThumbCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839521AB6A9B900E62E60 /* LazyPDFThumbCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A081AB6A9B900E62E60 /* LazyPDFThumbCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839531AB6A9B900E62E60 /* LazyPDFThumbCache.m */; };
+		90483A091AB6A9B900E62E60 /* LazyPDFThumbCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839531AB6A9B900E62E60 /* LazyPDFThumbCache.m */; };
+		90483A0A1AB6A9B900E62E60 /* LazyPDFThumbFetch.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839541AB6A9B900E62E60 /* LazyPDFThumbFetch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A0B1AB6A9B900E62E60 /* LazyPDFThumbFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839551AB6A9B900E62E60 /* LazyPDFThumbFetch.m */; };
+		90483A0C1AB6A9B900E62E60 /* LazyPDFThumbFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839551AB6A9B900E62E60 /* LazyPDFThumbFetch.m */; };
+		90483A0D1AB6A9B900E62E60 /* LazyPDFThumbQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839561AB6A9B900E62E60 /* LazyPDFThumbQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A0E1AB6A9B900E62E60 /* LazyPDFThumbQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839571AB6A9B900E62E60 /* LazyPDFThumbQueue.m */; };
+		90483A0F1AB6A9B900E62E60 /* LazyPDFThumbQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839571AB6A9B900E62E60 /* LazyPDFThumbQueue.m */; };
+		90483A101AB6A9B900E62E60 /* LazyPDFThumbRender.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839581AB6A9B900E62E60 /* LazyPDFThumbRender.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A111AB6A9B900E62E60 /* LazyPDFThumbRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839591AB6A9B900E62E60 /* LazyPDFThumbRender.m */; };
+		90483A121AB6A9B900E62E60 /* LazyPDFThumbRender.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839591AB6A9B900E62E60 /* LazyPDFThumbRender.m */; };
+		90483A131AB6A9B900E62E60 /* LazyPDFThumbRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048395A1AB6A9B900E62E60 /* LazyPDFThumbRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A141AB6A9B900E62E60 /* LazyPDFThumbRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048395B1AB6A9B900E62E60 /* LazyPDFThumbRequest.m */; };
+		90483A151AB6A9B900E62E60 /* LazyPDFThumbRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048395B1AB6A9B900E62E60 /* LazyPDFThumbRequest.m */; };
+		90483A161AB6A9B900E62E60 /* LazyPDFThumbsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048395C1AB6A9B900E62E60 /* LazyPDFThumbsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A171AB6A9B900E62E60 /* LazyPDFThumbsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048395D1AB6A9B900E62E60 /* LazyPDFThumbsView.m */; };
+		90483A181AB6A9B900E62E60 /* LazyPDFThumbsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048395D1AB6A9B900E62E60 /* LazyPDFThumbsView.m */; };
+		90483A191AB6A9B900E62E60 /* LazyPDFThumbView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9048395E1AB6A9B900E62E60 /* LazyPDFThumbView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A1A1AB6A9B900E62E60 /* LazyPDFThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048395F1AB6A9B900E62E60 /* LazyPDFThumbView.m */; };
+		90483A1B1AB6A9B900E62E60 /* LazyPDFThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9048395F1AB6A9B900E62E60 /* LazyPDFThumbView.m */; };
+		90483A1C1AB6A9B900E62E60 /* LazyPDFTouchView.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839601AB6A9B900E62E60 /* LazyPDFTouchView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A1D1AB6A9B900E62E60 /* LazyPDFTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839611AB6A9B900E62E60 /* LazyPDFTouchView.m */; };
+		90483A1E1AB6A9B900E62E60 /* LazyPDFTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839611AB6A9B900E62E60 /* LazyPDFTouchView.m */; };
+		90483A1F1AB6A9B900E62E60 /* LazyPDFViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839621AB6A9B900E62E60 /* LazyPDFViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A201AB6A9B900E62E60 /* LazyPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839631AB6A9B900E62E60 /* LazyPDFViewController.m */; };
+		90483A211AB6A9B900E62E60 /* LazyPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839631AB6A9B900E62E60 /* LazyPDFViewController.m */; };
+		90483A221AB6A9B900E62E60 /* line-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839641AB6A9B900E62E60 /* line-but.png */; };
+		90483A231AB6A9B900E62E60 /* line-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839641AB6A9B900E62E60 /* line-but.png */; };
+		90483A241AB6A9B900E62E60 /* line-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839651AB6A9B900E62E60 /* line-but@2x.png */; };
+		90483A251AB6A9B900E62E60 /* line-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839651AB6A9B900E62E60 /* line-but@2x.png */; };
+		90483A261AB6A9B900E62E60 /* pen-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839661AB6A9B900E62E60 /* pen-but.png */; };
+		90483A271AB6A9B900E62E60 /* pen-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839661AB6A9B900E62E60 /* pen-but.png */; };
+		90483A281AB6A9B900E62E60 /* pen-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839671AB6A9B900E62E60 /* pen-but@2x.png */; };
+		90483A291AB6A9B900E62E60 /* pen-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839671AB6A9B900E62E60 /* pen-but@2x.png */; };
+		90483A2A1AB6A9B900E62E60 /* Pen-Button-Y.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839681AB6A9B900E62E60 /* Pen-Button-Y.png */; };
+		90483A2B1AB6A9B900E62E60 /* Pen-Button-Y.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839681AB6A9B900E62E60 /* Pen-Button-Y.png */; };
+		90483A2C1AB6A9B900E62E60 /* Pen-Button-Y@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839691AB6A9B900E62E60 /* Pen-Button-Y@2x.png */; };
+		90483A2D1AB6A9B900E62E60 /* Pen-Button-Y@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839691AB6A9B900E62E60 /* Pen-Button-Y@2x.png */; };
+		90483A2E1AB6A9B900E62E60 /* Pen-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396A1AB6A9B900E62E60 /* Pen-Button.png */; };
+		90483A2F1AB6A9B900E62E60 /* Pen-Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396A1AB6A9B900E62E60 /* Pen-Button.png */; };
+		90483A301AB6A9B900E62E60 /* Pen-Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396B1AB6A9B900E62E60 /* Pen-Button@2x.png */; };
+		90483A311AB6A9B900E62E60 /* Pen-Button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396B1AB6A9B900E62E60 /* Pen-Button@2x.png */; };
+		90483A321AB6A9B900E62E60 /* redo-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396C1AB6A9B900E62E60 /* redo-but.png */; };
+		90483A331AB6A9B900E62E60 /* redo-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396C1AB6A9B900E62E60 /* redo-but.png */; };
+		90483A341AB6A9B900E62E60 /* redo-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396D1AB6A9B900E62E60 /* redo-but@2x.png */; };
+		90483A351AB6A9B900E62E60 /* redo-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396D1AB6A9B900E62E60 /* redo-but@2x.png */; };
+		90483A361AB6A9B900E62E60 /* square-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396E1AB6A9B900E62E60 /* square-but.png */; };
+		90483A371AB6A9B900E62E60 /* square-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396E1AB6A9B900E62E60 /* square-but.png */; };
+		90483A381AB6A9B900E62E60 /* square-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396F1AB6A9B900E62E60 /* square-but@2x.png */; };
+		90483A391AB6A9B900E62E60 /* square-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048396F1AB6A9B900E62E60 /* square-but@2x.png */; };
+		90483A3A1AB6A9B900E62E60 /* squarefill-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839701AB6A9B900E62E60 /* squarefill-but.png */; };
+		90483A3B1AB6A9B900E62E60 /* squarefill-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839701AB6A9B900E62E60 /* squarefill-but.png */; };
+		90483A3C1AB6A9B900E62E60 /* squarefill-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839711AB6A9B900E62E60 /* squarefill-but@2x.png */; };
+		90483A3D1AB6A9B900E62E60 /* squarefill-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839711AB6A9B900E62E60 /* squarefill-but@2x.png */; };
+		90483A3E1AB6A9B900E62E60 /* text-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839721AB6A9B900E62E60 /* text-but.png */; };
+		90483A3F1AB6A9B900E62E60 /* text-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839721AB6A9B900E62E60 /* text-but.png */; };
+		90483A401AB6A9B900E62E60 /* text-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839731AB6A9B900E62E60 /* text-but@2x.png */; };
+		90483A411AB6A9B900E62E60 /* text-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 904839731AB6A9B900E62E60 /* text-but@2x.png */; };
+		90483A421AB6A9B900E62E60 /* ThumbsMainToolbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839741AB6A9B900E62E60 /* ThumbsMainToolbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A431AB6A9B900E62E60 /* ThumbsMainToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839751AB6A9B900E62E60 /* ThumbsMainToolbar.m */; };
+		90483A441AB6A9B900E62E60 /* ThumbsMainToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839751AB6A9B900E62E60 /* ThumbsMainToolbar.m */; };
+		90483A451AB6A9B900E62E60 /* ThumbsViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839761AB6A9B900E62E60 /* ThumbsViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A461AB6A9B900E62E60 /* ThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839771AB6A9B900E62E60 /* ThumbsViewController.m */; };
+		90483A471AB6A9B900E62E60 /* ThumbsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839771AB6A9B900E62E60 /* ThumbsViewController.m */; };
+		90483A481AB6A9B900E62E60 /* UIXToolbarView.h in Headers */ = {isa = PBXBuildFile; fileRef = 904839781AB6A9B900E62E60 /* UIXToolbarView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90483A491AB6A9B900E62E60 /* UIXToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839791AB6A9B900E62E60 /* UIXToolbarView.m */; };
+		90483A4A1AB6A9B900E62E60 /* UIXToolbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 904839791AB6A9B900E62E60 /* UIXToolbarView.m */; };
+		90483A4B1AB6A9B900E62E60 /* undo-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048397A1AB6A9B900E62E60 /* undo-but.png */; };
+		90483A4C1AB6A9B900E62E60 /* undo-but.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048397A1AB6A9B900E62E60 /* undo-but.png */; };
+		90483A4D1AB6A9B900E62E60 /* undo-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048397B1AB6A9B900E62E60 /* undo-but@2x.png */; };
+		90483A4E1AB6A9B900E62E60 /* undo-but@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9048397B1AB6A9B900E62E60 /* undo-but@2x.png */; };
+		90D421471AC3952200D3CE2A /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 90D421461AC3952200D3CE2A /* VERSION */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		904838571AB6A8C600E62E60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 904838411AB6A8C600E62E60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 904838491AB6A8C600E62E60;
+			remoteInfo = LazyPDFKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9048384A1AB6A8C600E62E60 /* LazyPDFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LazyPDFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9048384E1AB6A8C600E62E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9048384F1AB6A8C600E62E60 /* LazyPDFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LazyPDFKit.h; sourceTree = "<group>"; };
+		904838551AB6A8C600E62E60 /* LazyPDFKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyPDFKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9048385B1AB6A8C600E62E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9048385C1AB6A8C600E62E60 /* LazyPDFKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LazyPDFKitTests.m; sourceTree = "<group>"; };
+		904838FE1AB6A9B900E62E60 /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		904838FF1AB6A9B900E62E60 /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		904839001AB6A9B900E62E60 /* ARCMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCMacros.h; sourceTree = "<group>"; };
+		904839011AB6A9B900E62E60 /* CGPDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPDFDocument.h; sourceTree = "<group>"; };
+		904839021AB6A9B900E62E60 /* CGPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPDFDocument.m; sourceTree = "<group>"; };
+		904839031AB6A9B900E62E60 /* circle-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-but.png"; sourceTree = "<group>"; };
+		904839041AB6A9B900E62E60 /* circle-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-but@2x.png"; sourceTree = "<group>"; };
+		904839051AB6A9B900E62E60 /* circlefill-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circlefill-but.png"; sourceTree = "<group>"; };
+		904839061AB6A9B900E62E60 /* circlefill-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circlefill-but@2x.png"; sourceTree = "<group>"; };
+		904839071AB6A9B900E62E60 /* clear-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear-but.png"; sourceTree = "<group>"; };
+		904839081AB6A9B900E62E60 /* clear-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clear-but@2x.png"; sourceTree = "<group>"; };
+		904839091AB6A9B900E62E60 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9048390A1AB6A9B900E62E60 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
+		9048390B1AB6A9B900E62E60 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
+		9048390C1AB6A9B900E62E60 /* done-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done-but.png"; sourceTree = "<group>"; };
+		9048390D1AB6A9B900E62E60 /* done-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done-but@2x.png"; sourceTree = "<group>"; };
+		9048390E1AB6A9B900E62E60 /* eraser-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eraser-but.png"; sourceTree = "<group>"; };
+		9048390F1AB6A9B900E62E60 /* eraser-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eraser-but@2x.png"; sourceTree = "<group>"; };
+		904839101AB6A9B900E62E60 /* File.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = File.h; sourceTree = "<group>"; };
+		904839111AB6A9B900E62E60 /* File.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = File.m; sourceTree = "<group>"; };
+		904839121AB6A9B900E62E60 /* LazyPDF-Button-H.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Button-H.png"; sourceTree = "<group>"; };
+		904839131AB6A9B900E62E60 /* LazyPDF-Button-H@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Button-H@2x.png"; sourceTree = "<group>"; };
+		904839141AB6A9B900E62E60 /* LazyPDF-Button-N.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Button-N.png"; sourceTree = "<group>"; };
+		904839151AB6A9B900E62E60 /* LazyPDF-Button-N@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Button-N@2x.png"; sourceTree = "<group>"; };
+		904839161AB6A9B900E62E60 /* LazyPDF-Email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Email.png"; sourceTree = "<group>"; };
+		904839171AB6A9B900E62E60 /* LazyPDF-Email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Email@2x.png"; sourceTree = "<group>"; };
+		904839181AB6A9B900E62E60 /* LazyPDF-Export.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Export.png"; sourceTree = "<group>"; };
+		904839191AB6A9B900E62E60 /* LazyPDF-Export@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Export@2x.png"; sourceTree = "<group>"; };
+		9048391A1AB6A9B900E62E60 /* LazyPDF-Mark-N.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Mark-N.png"; sourceTree = "<group>"; };
+		9048391B1AB6A9B900E62E60 /* LazyPDF-Mark-N@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Mark-N@2x.png"; sourceTree = "<group>"; };
+		9048391C1AB6A9B900E62E60 /* LazyPDF-Mark-Y.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Mark-Y.png"; sourceTree = "<group>"; };
+		9048391D1AB6A9B900E62E60 /* LazyPDF-Mark-Y@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Mark-Y@2x.png"; sourceTree = "<group>"; };
+		9048391E1AB6A9B900E62E60 /* LazyPDF-Print.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Print.png"; sourceTree = "<group>"; };
+		9048391F1AB6A9B900E62E60 /* LazyPDF-Print@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Print@2x.png"; sourceTree = "<group>"; };
+		904839201AB6A9B900E62E60 /* LazyPDF-Thumbs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Thumbs.png"; sourceTree = "<group>"; };
+		904839211AB6A9B900E62E60 /* LazyPDF-Thumbs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LazyPDF-Thumbs@2x.png"; sourceTree = "<group>"; };
+		904839221AB6A9B900E62E60 /* LazyPDFColorBarPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFColorBarPicker.h; sourceTree = "<group>"; };
+		904839231AB6A9B900E62E60 /* LazyPDFColorBarPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFColorBarPicker.m; sourceTree = "<group>"; };
+		904839241AB6A9B900E62E60 /* LazyPDFColorIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFColorIndicatorView.h; sourceTree = "<group>"; };
+		904839251AB6A9B900E62E60 /* LazyPDFColorIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFColorIndicatorView.m; sourceTree = "<group>"; };
+		904839261AB6A9B900E62E60 /* LazyPDFColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFColorPicker.h; sourceTree = "<group>"; };
+		904839271AB6A9B900E62E60 /* LazyPDFColorPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFColorPickerController.h; sourceTree = "<group>"; };
+		904839281AB6A9B900E62E60 /* LazyPDFColorPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFColorPickerController.m; sourceTree = "<group>"; };
+		904839291AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFColorPickerNavigationController.h; sourceTree = "<group>"; };
+		9048392A1AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFColorPickerNavigationController.m; sourceTree = "<group>"; };
+		9048392B1AB6A9B900E62E60 /* LazyPDFColorPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LazyPDFColorPickerView.xib; sourceTree = "<group>"; };
+		9048392C1AB6A9B900E62E60 /* LazyPDFColorSquarePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFColorSquarePicker.h; sourceTree = "<group>"; };
+		9048392D1AB6A9B900E62E60 /* LazyPDFColorSquarePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFColorSquarePicker.m; sourceTree = "<group>"; };
+		9048392E1AB6A9B900E62E60 /* LazyPDFConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFConstants.h; sourceTree = "<group>"; };
+		9048392F1AB6A9B900E62E60 /* LazyPDFConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFConstants.m; sourceTree = "<group>"; };
+		904839301AB6A9B900E62E60 /* LazyPDFContentPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFContentPage.h; sourceTree = "<group>"; };
+		904839311AB6A9B900E62E60 /* LazyPDFContentPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFContentPage.m; sourceTree = "<group>"; };
+		904839321AB6A9B900E62E60 /* LazyPDFContentTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFContentTile.h; sourceTree = "<group>"; };
+		904839331AB6A9B900E62E60 /* LazyPDFContentTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFContentTile.m; sourceTree = "<group>"; };
+		904839341AB6A9B900E62E60 /* LazyPDFContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFContentView.h; sourceTree = "<group>"; };
+		904839351AB6A9B900E62E60 /* LazyPDFContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFContentView.m; sourceTree = "<group>"; };
+		904839361AB6A9B900E62E60 /* LazyPDFDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFDataManager.h; sourceTree = "<group>"; };
+		904839371AB6A9B900E62E60 /* LazyPDFDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFDataManager.m; sourceTree = "<group>"; };
+		904839381AB6A9B900E62E60 /* LazyPDFDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFDocument.h; sourceTree = "<group>"; };
+		904839391AB6A9B900E62E60 /* LazyPDFDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFDocument.m; sourceTree = "<group>"; };
+		9048393A1AB6A9B900E62E60 /* LazyPDFDocumentOutline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFDocumentOutline.h; sourceTree = "<group>"; };
+		9048393B1AB6A9B900E62E60 /* LazyPDFDocumentOutline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFDocumentOutline.m; sourceTree = "<group>"; };
+		9048393C1AB6A9B900E62E60 /* LazyPDFDrawingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFDrawingTools.h; sourceTree = "<group>"; };
+		9048393D1AB6A9B900E62E60 /* LazyPDFDrawingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFDrawingTools.m; sourceTree = "<group>"; };
+		9048393E1AB6A9B900E62E60 /* LazyPDFDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFDrawingView.h; sourceTree = "<group>"; };
+		9048393F1AB6A9B900E62E60 /* LazyPDFDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFDrawingView.m; sourceTree = "<group>"; };
+		904839401AB6A9B900E62E60 /* LazyPDFDrawToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFDrawToolbar.h; sourceTree = "<group>"; };
+		904839411AB6A9B900E62E60 /* LazyPDFDrawToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFDrawToolbar.m; sourceTree = "<group>"; };
+		904839421AB6A9B900E62E60 /* LazyPDFHSBSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFHSBSupport.h; sourceTree = "<group>"; };
+		904839431AB6A9B900E62E60 /* LazyPDFHSBSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFHSBSupport.m; sourceTree = "<group>"; };
+		904839441AB6A9B900E62E60 /* LazyPDFMainPagebar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFMainPagebar.h; sourceTree = "<group>"; };
+		904839451AB6A9B900E62E60 /* LazyPDFMainPagebar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFMainPagebar.m; sourceTree = "<group>"; };
+		904839461AB6A9B900E62E60 /* LazyPDFMainToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFMainToolbar.h; sourceTree = "<group>"; };
+		904839471AB6A9B900E62E60 /* LazyPDFMainToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFMainToolbar.m; sourceTree = "<group>"; };
+		904839491AB6A9B900E62E60 /* LazyPDFModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyPDFModel.xcdatamodel; sourceTree = "<group>"; };
+		9048394A1AB6A9B900E62E60 /* LazyPDFPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFPopoverController.h; sourceTree = "<group>"; };
+		9048394B1AB6A9B900E62E60 /* LazyPDFPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFPopoverController.m; sourceTree = "<group>"; };
+		9048394C1AB6A9B900E62E60 /* LazyPDFPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFPopoverView.h; sourceTree = "<group>"; };
+		9048394D1AB6A9B900E62E60 /* LazyPDFPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFPopoverView.m; sourceTree = "<group>"; };
+		9048394E1AB6A9B900E62E60 /* LazyPDFPropertyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFPropertyController.h; sourceTree = "<group>"; };
+		9048394F1AB6A9B900E62E60 /* LazyPDFPropertyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFPropertyController.m; sourceTree = "<group>"; };
+		904839501AB6A9B900E62E60 /* LazyPDFSourceColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFSourceColorView.h; sourceTree = "<group>"; };
+		904839511AB6A9B900E62E60 /* LazyPDFSourceColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFSourceColorView.m; sourceTree = "<group>"; };
+		904839521AB6A9B900E62E60 /* LazyPDFThumbCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFThumbCache.h; sourceTree = "<group>"; };
+		904839531AB6A9B900E62E60 /* LazyPDFThumbCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFThumbCache.m; sourceTree = "<group>"; };
+		904839541AB6A9B900E62E60 /* LazyPDFThumbFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFThumbFetch.h; sourceTree = "<group>"; };
+		904839551AB6A9B900E62E60 /* LazyPDFThumbFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFThumbFetch.m; sourceTree = "<group>"; };
+		904839561AB6A9B900E62E60 /* LazyPDFThumbQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFThumbQueue.h; sourceTree = "<group>"; };
+		904839571AB6A9B900E62E60 /* LazyPDFThumbQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFThumbQueue.m; sourceTree = "<group>"; };
+		904839581AB6A9B900E62E60 /* LazyPDFThumbRender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFThumbRender.h; sourceTree = "<group>"; };
+		904839591AB6A9B900E62E60 /* LazyPDFThumbRender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFThumbRender.m; sourceTree = "<group>"; };
+		9048395A1AB6A9B900E62E60 /* LazyPDFThumbRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFThumbRequest.h; sourceTree = "<group>"; };
+		9048395B1AB6A9B900E62E60 /* LazyPDFThumbRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFThumbRequest.m; sourceTree = "<group>"; };
+		9048395C1AB6A9B900E62E60 /* LazyPDFThumbsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFThumbsView.h; sourceTree = "<group>"; };
+		9048395D1AB6A9B900E62E60 /* LazyPDFThumbsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFThumbsView.m; sourceTree = "<group>"; };
+		9048395E1AB6A9B900E62E60 /* LazyPDFThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFThumbView.h; sourceTree = "<group>"; };
+		9048395F1AB6A9B900E62E60 /* LazyPDFThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFThumbView.m; sourceTree = "<group>"; };
+		904839601AB6A9B900E62E60 /* LazyPDFTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFTouchView.h; sourceTree = "<group>"; };
+		904839611AB6A9B900E62E60 /* LazyPDFTouchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFTouchView.m; sourceTree = "<group>"; };
+		904839621AB6A9B900E62E60 /* LazyPDFViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LazyPDFViewController.h; sourceTree = "<group>"; };
+		904839631AB6A9B900E62E60 /* LazyPDFViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LazyPDFViewController.m; sourceTree = "<group>"; };
+		904839641AB6A9B900E62E60 /* line-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line-but.png"; sourceTree = "<group>"; };
+		904839651AB6A9B900E62E60 /* line-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line-but@2x.png"; sourceTree = "<group>"; };
+		904839661AB6A9B900E62E60 /* pen-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pen-but.png"; sourceTree = "<group>"; };
+		904839671AB6A9B900E62E60 /* pen-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pen-but@2x.png"; sourceTree = "<group>"; };
+		904839681AB6A9B900E62E60 /* Pen-Button-Y.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pen-Button-Y.png"; sourceTree = "<group>"; };
+		904839691AB6A9B900E62E60 /* Pen-Button-Y@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pen-Button-Y@2x.png"; sourceTree = "<group>"; };
+		9048396A1AB6A9B900E62E60 /* Pen-Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pen-Button.png"; sourceTree = "<group>"; };
+		9048396B1AB6A9B900E62E60 /* Pen-Button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pen-Button@2x.png"; sourceTree = "<group>"; };
+		9048396C1AB6A9B900E62E60 /* redo-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redo-but.png"; sourceTree = "<group>"; };
+		9048396D1AB6A9B900E62E60 /* redo-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redo-but@2x.png"; sourceTree = "<group>"; };
+		9048396E1AB6A9B900E62E60 /* square-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-but.png"; sourceTree = "<group>"; };
+		9048396F1AB6A9B900E62E60 /* square-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square-but@2x.png"; sourceTree = "<group>"; };
+		904839701AB6A9B900E62E60 /* squarefill-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squarefill-but.png"; sourceTree = "<group>"; };
+		904839711AB6A9B900E62E60 /* squarefill-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "squarefill-but@2x.png"; sourceTree = "<group>"; };
+		904839721AB6A9B900E62E60 /* text-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-but.png"; sourceTree = "<group>"; };
+		904839731AB6A9B900E62E60 /* text-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "text-but@2x.png"; sourceTree = "<group>"; };
+		904839741AB6A9B900E62E60 /* ThumbsMainToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbsMainToolbar.h; sourceTree = "<group>"; };
+		904839751AB6A9B900E62E60 /* ThumbsMainToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbsMainToolbar.m; sourceTree = "<group>"; };
+		904839761AB6A9B900E62E60 /* ThumbsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbsViewController.h; sourceTree = "<group>"; };
+		904839771AB6A9B900E62E60 /* ThumbsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbsViewController.m; sourceTree = "<group>"; };
+		904839781AB6A9B900E62E60 /* UIXToolbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIXToolbarView.h; sourceTree = "<group>"; };
+		904839791AB6A9B900E62E60 /* UIXToolbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIXToolbarView.m; sourceTree = "<group>"; };
+		9048397A1AB6A9B900E62E60 /* undo-but.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "undo-but.png"; sourceTree = "<group>"; };
+		9048397B1AB6A9B900E62E60 /* undo-but@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "undo-but@2x.png"; sourceTree = "<group>"; };
+		90D421461AC3952200D3CE2A /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		904838461AB6A8C600E62E60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		904838521AB6A8C600E62E60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904838561AB6A8C600E62E60 /* LazyPDFKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		904838401AB6A8C600E62E60 = {
+			isa = PBXGroup;
+			children = (
+				9048384C1AB6A8C600E62E60 /* LazyPDFKit */,
+				904838591AB6A8C600E62E60 /* LazyPDFKitTests */,
+				9048384B1AB6A8C600E62E60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9048384B1AB6A8C600E62E60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9048384A1AB6A8C600E62E60 /* LazyPDFKit.framework */,
+				904838551AB6A8C600E62E60 /* LazyPDFKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9048384C1AB6A8C600E62E60 /* LazyPDFKit */ = {
+			isa = PBXGroup;
+			children = (
+				90483A4F1AB6A9E600E62E60 /* Graphics */,
+				90483A501AB6AA1000E62E60 /* CoreData */,
+				9048384F1AB6A8C600E62E60 /* LazyPDFKit.h */,
+				904838FE1AB6A9B900E62E60 /* Annotation.h */,
+				904838FF1AB6A9B900E62E60 /* Annotation.m */,
+				904839001AB6A9B900E62E60 /* ARCMacros.h */,
+				904839011AB6A9B900E62E60 /* CGPDFDocument.h */,
+				904839021AB6A9B900E62E60 /* CGPDFDocument.m */,
+				904839101AB6A9B900E62E60 /* File.h */,
+				904839111AB6A9B900E62E60 /* File.m */,
+				904839221AB6A9B900E62E60 /* LazyPDFColorBarPicker.h */,
+				904839231AB6A9B900E62E60 /* LazyPDFColorBarPicker.m */,
+				904839241AB6A9B900E62E60 /* LazyPDFColorIndicatorView.h */,
+				904839251AB6A9B900E62E60 /* LazyPDFColorIndicatorView.m */,
+				904839261AB6A9B900E62E60 /* LazyPDFColorPicker.h */,
+				904839271AB6A9B900E62E60 /* LazyPDFColorPickerController.h */,
+				904839281AB6A9B900E62E60 /* LazyPDFColorPickerController.m */,
+				904839291AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.h */,
+				9048392A1AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.m */,
+				9048392B1AB6A9B900E62E60 /* LazyPDFColorPickerView.xib */,
+				9048392C1AB6A9B900E62E60 /* LazyPDFColorSquarePicker.h */,
+				9048392D1AB6A9B900E62E60 /* LazyPDFColorSquarePicker.m */,
+				9048392E1AB6A9B900E62E60 /* LazyPDFConstants.h */,
+				9048392F1AB6A9B900E62E60 /* LazyPDFConstants.m */,
+				904839301AB6A9B900E62E60 /* LazyPDFContentPage.h */,
+				904839311AB6A9B900E62E60 /* LazyPDFContentPage.m */,
+				904839321AB6A9B900E62E60 /* LazyPDFContentTile.h */,
+				904839331AB6A9B900E62E60 /* LazyPDFContentTile.m */,
+				904839341AB6A9B900E62E60 /* LazyPDFContentView.h */,
+				904839351AB6A9B900E62E60 /* LazyPDFContentView.m */,
+				904839381AB6A9B900E62E60 /* LazyPDFDocument.h */,
+				904839391AB6A9B900E62E60 /* LazyPDFDocument.m */,
+				9048393A1AB6A9B900E62E60 /* LazyPDFDocumentOutline.h */,
+				9048393B1AB6A9B900E62E60 /* LazyPDFDocumentOutline.m */,
+				9048393C1AB6A9B900E62E60 /* LazyPDFDrawingTools.h */,
+				9048393D1AB6A9B900E62E60 /* LazyPDFDrawingTools.m */,
+				9048393E1AB6A9B900E62E60 /* LazyPDFDrawingView.h */,
+				9048393F1AB6A9B900E62E60 /* LazyPDFDrawingView.m */,
+				904839401AB6A9B900E62E60 /* LazyPDFDrawToolbar.h */,
+				904839411AB6A9B900E62E60 /* LazyPDFDrawToolbar.m */,
+				904839421AB6A9B900E62E60 /* LazyPDFHSBSupport.h */,
+				904839431AB6A9B900E62E60 /* LazyPDFHSBSupport.m */,
+				904839441AB6A9B900E62E60 /* LazyPDFMainPagebar.h */,
+				904839451AB6A9B900E62E60 /* LazyPDFMainPagebar.m */,
+				904839461AB6A9B900E62E60 /* LazyPDFMainToolbar.h */,
+				904839471AB6A9B900E62E60 /* LazyPDFMainToolbar.m */,
+				9048394A1AB6A9B900E62E60 /* LazyPDFPopoverController.h */,
+				9048394B1AB6A9B900E62E60 /* LazyPDFPopoverController.m */,
+				9048394C1AB6A9B900E62E60 /* LazyPDFPopoverView.h */,
+				9048394D1AB6A9B900E62E60 /* LazyPDFPopoverView.m */,
+				9048394E1AB6A9B900E62E60 /* LazyPDFPropertyController.h */,
+				9048394F1AB6A9B900E62E60 /* LazyPDFPropertyController.m */,
+				904839501AB6A9B900E62E60 /* LazyPDFSourceColorView.h */,
+				904839511AB6A9B900E62E60 /* LazyPDFSourceColorView.m */,
+				904839521AB6A9B900E62E60 /* LazyPDFThumbCache.h */,
+				904839531AB6A9B900E62E60 /* LazyPDFThumbCache.m */,
+				904839541AB6A9B900E62E60 /* LazyPDFThumbFetch.h */,
+				904839551AB6A9B900E62E60 /* LazyPDFThumbFetch.m */,
+				904839561AB6A9B900E62E60 /* LazyPDFThumbQueue.h */,
+				904839571AB6A9B900E62E60 /* LazyPDFThumbQueue.m */,
+				904839581AB6A9B900E62E60 /* LazyPDFThumbRender.h */,
+				904839591AB6A9B900E62E60 /* LazyPDFThumbRender.m */,
+				9048395A1AB6A9B900E62E60 /* LazyPDFThumbRequest.h */,
+				9048395B1AB6A9B900E62E60 /* LazyPDFThumbRequest.m */,
+				9048395C1AB6A9B900E62E60 /* LazyPDFThumbsView.h */,
+				9048395D1AB6A9B900E62E60 /* LazyPDFThumbsView.m */,
+				9048395E1AB6A9B900E62E60 /* LazyPDFThumbView.h */,
+				9048395F1AB6A9B900E62E60 /* LazyPDFThumbView.m */,
+				904839601AB6A9B900E62E60 /* LazyPDFTouchView.h */,
+				904839611AB6A9B900E62E60 /* LazyPDFTouchView.m */,
+				904839621AB6A9B900E62E60 /* LazyPDFViewController.h */,
+				904839631AB6A9B900E62E60 /* LazyPDFViewController.m */,
+				904839741AB6A9B900E62E60 /* ThumbsMainToolbar.h */,
+				904839751AB6A9B900E62E60 /* ThumbsMainToolbar.m */,
+				904839761AB6A9B900E62E60 /* ThumbsViewController.h */,
+				904839771AB6A9B900E62E60 /* ThumbsViewController.m */,
+				904839781AB6A9B900E62E60 /* UIXToolbarView.h */,
+				904839791AB6A9B900E62E60 /* UIXToolbarView.m */,
+				90D421461AC3952200D3CE2A /* VERSION */,
+				9048384D1AB6A8C600E62E60 /* Supporting Files */,
+			);
+			path = LazyPDFKit;
+			sourceTree = "<group>";
+		};
+		9048384D1AB6A8C600E62E60 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9048384E1AB6A8C600E62E60 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		904838591AB6A8C600E62E60 /* LazyPDFKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				9048385C1AB6A8C600E62E60 /* LazyPDFKitTests.m */,
+				9048385A1AB6A8C600E62E60 /* Supporting Files */,
+			);
+			path = LazyPDFKitTests;
+			sourceTree = "<group>";
+		};
+		9048385A1AB6A8C600E62E60 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9048385B1AB6A8C600E62E60 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90483A4F1AB6A9E600E62E60 /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				904839031AB6A9B900E62E60 /* circle-but.png */,
+				904839041AB6A9B900E62E60 /* circle-but@2x.png */,
+				904839051AB6A9B900E62E60 /* circlefill-but.png */,
+				904839061AB6A9B900E62E60 /* circlefill-but@2x.png */,
+				904839071AB6A9B900E62E60 /* clear-but.png */,
+				904839081AB6A9B900E62E60 /* clear-but@2x.png */,
+				904839091AB6A9B900E62E60 /* Default-568h@2x.png */,
+				9048390A1AB6A9B900E62E60 /* Default-667h@2x.png */,
+				9048390B1AB6A9B900E62E60 /* Default-736h@3x.png */,
+				9048390C1AB6A9B900E62E60 /* done-but.png */,
+				9048390D1AB6A9B900E62E60 /* done-but@2x.png */,
+				9048390E1AB6A9B900E62E60 /* eraser-but.png */,
+				9048390F1AB6A9B900E62E60 /* eraser-but@2x.png */,
+				904839121AB6A9B900E62E60 /* LazyPDF-Button-H.png */,
+				904839131AB6A9B900E62E60 /* LazyPDF-Button-H@2x.png */,
+				904839141AB6A9B900E62E60 /* LazyPDF-Button-N.png */,
+				904839151AB6A9B900E62E60 /* LazyPDF-Button-N@2x.png */,
+				904839161AB6A9B900E62E60 /* LazyPDF-Email.png */,
+				904839171AB6A9B900E62E60 /* LazyPDF-Email@2x.png */,
+				904839181AB6A9B900E62E60 /* LazyPDF-Export.png */,
+				904839191AB6A9B900E62E60 /* LazyPDF-Export@2x.png */,
+				9048391A1AB6A9B900E62E60 /* LazyPDF-Mark-N.png */,
+				9048391B1AB6A9B900E62E60 /* LazyPDF-Mark-N@2x.png */,
+				9048391C1AB6A9B900E62E60 /* LazyPDF-Mark-Y.png */,
+				9048391D1AB6A9B900E62E60 /* LazyPDF-Mark-Y@2x.png */,
+				9048391E1AB6A9B900E62E60 /* LazyPDF-Print.png */,
+				9048391F1AB6A9B900E62E60 /* LazyPDF-Print@2x.png */,
+				904839201AB6A9B900E62E60 /* LazyPDF-Thumbs.png */,
+				904839211AB6A9B900E62E60 /* LazyPDF-Thumbs@2x.png */,
+				904839641AB6A9B900E62E60 /* line-but.png */,
+				904839651AB6A9B900E62E60 /* line-but@2x.png */,
+				904839661AB6A9B900E62E60 /* pen-but.png */,
+				904839671AB6A9B900E62E60 /* pen-but@2x.png */,
+				904839681AB6A9B900E62E60 /* Pen-Button-Y.png */,
+				904839691AB6A9B900E62E60 /* Pen-Button-Y@2x.png */,
+				9048396A1AB6A9B900E62E60 /* Pen-Button.png */,
+				9048396B1AB6A9B900E62E60 /* Pen-Button@2x.png */,
+				9048396C1AB6A9B900E62E60 /* redo-but.png */,
+				9048396D1AB6A9B900E62E60 /* redo-but@2x.png */,
+				9048396E1AB6A9B900E62E60 /* square-but.png */,
+				9048396F1AB6A9B900E62E60 /* square-but@2x.png */,
+				904839701AB6A9B900E62E60 /* squarefill-but.png */,
+				904839711AB6A9B900E62E60 /* squarefill-but@2x.png */,
+				904839721AB6A9B900E62E60 /* text-but.png */,
+				904839731AB6A9B900E62E60 /* text-but@2x.png */,
+				9048397A1AB6A9B900E62E60 /* undo-but.png */,
+				9048397B1AB6A9B900E62E60 /* undo-but@2x.png */,
+			);
+			name = Graphics;
+			sourceTree = "<group>";
+		};
+		90483A501AB6AA1000E62E60 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				904839361AB6A9B900E62E60 /* LazyPDFDataManager.h */,
+				904839371AB6A9B900E62E60 /* LazyPDFDataManager.m */,
+				904839481AB6A9B900E62E60 /* LazyPDFModel.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		904838471AB6A8C600E62E60 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904839C31AB6A9B900E62E60 /* LazyPDFColorIndicatorView.h in Headers */,
+				90483A0D1AB6A9B900E62E60 /* LazyPDFThumbQueue.h in Headers */,
+				90483A481AB6A9B900E62E60 /* UIXToolbarView.h in Headers */,
+				904839C61AB6A9B900E62E60 /* LazyPDFColorPicker.h in Headers */,
+				9048399D1AB6A9B900E62E60 /* File.h in Headers */,
+				90483A101AB6A9B900E62E60 /* LazyPDFThumbRender.h in Headers */,
+				904839DB1AB6A9B900E62E60 /* LazyPDFContentView.h in Headers */,
+				904839C01AB6A9B900E62E60 /* LazyPDFColorBarPicker.h in Headers */,
+				904839801AB6A9B900E62E60 /* CGPDFDocument.h in Headers */,
+				904838501AB6A8C600E62E60 /* LazyPDFKit.h in Headers */,
+				9048397F1AB6A9B900E62E60 /* ARCMacros.h in Headers */,
+				90483A071AB6A9B900E62E60 /* LazyPDFThumbCache.h in Headers */,
+				904839D21AB6A9B900E62E60 /* LazyPDFConstants.h in Headers */,
+				904839DE1AB6A9B900E62E60 /* LazyPDFDataManager.h in Headers */,
+				904839CA1AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.h in Headers */,
+				904839EA1AB6A9B900E62E60 /* LazyPDFDrawingView.h in Headers */,
+				90483A131AB6A9B900E62E60 /* LazyPDFThumbRequest.h in Headers */,
+				904839F61AB6A9B900E62E60 /* LazyPDFMainToolbar.h in Headers */,
+				904839E71AB6A9B900E62E60 /* LazyPDFDrawingTools.h in Headers */,
+				90483A0A1AB6A9B900E62E60 /* LazyPDFThumbFetch.h in Headers */,
+				904839FE1AB6A9B900E62E60 /* LazyPDFPopoverView.h in Headers */,
+				90483A1C1AB6A9B900E62E60 /* LazyPDFTouchView.h in Headers */,
+				904839F01AB6A9B900E62E60 /* LazyPDFHSBSupport.h in Headers */,
+				904839D51AB6A9B900E62E60 /* LazyPDFContentPage.h in Headers */,
+				904839ED1AB6A9B900E62E60 /* LazyPDFDrawToolbar.h in Headers */,
+				90483A1F1AB6A9B900E62E60 /* LazyPDFViewController.h in Headers */,
+				904839FB1AB6A9B900E62E60 /* LazyPDFPopoverController.h in Headers */,
+				904839CF1AB6A9B900E62E60 /* LazyPDFColorSquarePicker.h in Headers */,
+				90483A191AB6A9B900E62E60 /* LazyPDFThumbView.h in Headers */,
+				904839E41AB6A9B900E62E60 /* LazyPDFDocumentOutline.h in Headers */,
+				904839F31AB6A9B900E62E60 /* LazyPDFMainPagebar.h in Headers */,
+				904839E11AB6A9B900E62E60 /* LazyPDFDocument.h in Headers */,
+				90483A041AB6A9B900E62E60 /* LazyPDFSourceColorView.h in Headers */,
+				90483A421AB6A9B900E62E60 /* ThumbsMainToolbar.h in Headers */,
+				9048397C1AB6A9B900E62E60 /* Annotation.h in Headers */,
+				90483A451AB6A9B900E62E60 /* ThumbsViewController.h in Headers */,
+				90483A011AB6A9B900E62E60 /* LazyPDFPropertyController.h in Headers */,
+				904839C71AB6A9B900E62E60 /* LazyPDFColorPickerController.h in Headers */,
+				904839D81AB6A9B900E62E60 /* LazyPDFContentTile.h in Headers */,
+				90483A161AB6A9B900E62E60 /* LazyPDFThumbsView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		904838491AB6A8C600E62E60 /* LazyPDFKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 904838601AB6A8C600E62E60 /* Build configuration list for PBXNativeTarget "LazyPDFKit" */;
+			buildPhases = (
+				904838451AB6A8C600E62E60 /* Sources */,
+				904838461AB6A8C600E62E60 /* Frameworks */,
+				904838471AB6A8C600E62E60 /* Headers */,
+				904838481AB6A8C600E62E60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LazyPDFKit;
+			productName = LazyPDFKit;
+			productReference = 9048384A1AB6A8C600E62E60 /* LazyPDFKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		904838541AB6A8C600E62E60 /* LazyPDFKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 904838631AB6A8C600E62E60 /* Build configuration list for PBXNativeTarget "LazyPDFKitTests" */;
+			buildPhases = (
+				904838511AB6A8C600E62E60 /* Sources */,
+				904838521AB6A8C600E62E60 /* Frameworks */,
+				904838531AB6A8C600E62E60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				904838581AB6A8C600E62E60 /* PBXTargetDependency */,
+			);
+			name = LazyPDFKitTests;
+			productName = LazyPDFKitTests;
+			productReference = 904838551AB6A8C600E62E60 /* LazyPDFKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		904838411AB6A8C600E62E60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Lazyprogram;
+				TargetAttributes = {
+					904838491AB6A8C600E62E60 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					904838541AB6A8C600E62E60 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					90D421411AC3943800D3CE2A = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 904838441AB6A8C600E62E60 /* Build configuration list for PBXProject "LazyPDFKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 904838401AB6A8C600E62E60;
+			productRefGroup = 9048384B1AB6A8C600E62E60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				904838491AB6A8C600E62E60 /* LazyPDFKit */,
+				904838541AB6A8C600E62E60 /* LazyPDFKitTests */,
+				90D421411AC3943800D3CE2A /* LazyPDFKitFramework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		904838481AB6A8C600E62E60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90483A3E1AB6A9B900E62E60 /* text-but.png in Resources */,
+				90483A301AB6A9B900E62E60 /* Pen-Button@2x.png in Resources */,
+				904839851AB6A9B900E62E60 /* circle-but@2x.png in Resources */,
+				9048398B1AB6A9B900E62E60 /* clear-but.png in Resources */,
+				904839831AB6A9B900E62E60 /* circle-but.png in Resources */,
+				904839CD1AB6A9B900E62E60 /* LazyPDFColorPickerView.xib in Resources */,
+				904839871AB6A9B900E62E60 /* circlefill-but.png in Resources */,
+				904839B21AB6A9B900E62E60 /* LazyPDF-Mark-N@2x.png in Resources */,
+				9048398D1AB6A9B900E62E60 /* clear-but@2x.png in Resources */,
+				904839A61AB6A9B900E62E60 /* LazyPDF-Button-N@2x.png in Resources */,
+				904839B01AB6A9B900E62E60 /* LazyPDF-Mark-N.png in Resources */,
+				90483A401AB6A9B900E62E60 /* text-but@2x.png in Resources */,
+				90483A3C1AB6A9B900E62E60 /* squarefill-but@2x.png in Resources */,
+				90483A361AB6A9B900E62E60 /* square-but.png in Resources */,
+				904839A41AB6A9B900E62E60 /* LazyPDF-Button-N.png in Resources */,
+				90483A2C1AB6A9B900E62E60 /* Pen-Button-Y@2x.png in Resources */,
+				904839931AB6A9B900E62E60 /* Default-736h@3x.png in Resources */,
+				90483A4B1AB6A9B900E62E60 /* undo-but.png in Resources */,
+				904839BE1AB6A9B900E62E60 /* LazyPDF-Thumbs@2x.png in Resources */,
+				90483A241AB6A9B900E62E60 /* line-but@2x.png in Resources */,
+				904839971AB6A9B900E62E60 /* done-but@2x.png in Resources */,
+				904839991AB6A9B900E62E60 /* eraser-but.png in Resources */,
+				90D421471AC3952200D3CE2A /* VERSION in Resources */,
+				904839AA1AB6A9B900E62E60 /* LazyPDF-Email@2x.png in Resources */,
+				904839B41AB6A9B900E62E60 /* LazyPDF-Mark-Y.png in Resources */,
+				90483A221AB6A9B900E62E60 /* line-but.png in Resources */,
+				904839911AB6A9B900E62E60 /* Default-667h@2x.png in Resources */,
+				904839BC1AB6A9B900E62E60 /* LazyPDF-Thumbs.png in Resources */,
+				90483A321AB6A9B900E62E60 /* redo-but.png in Resources */,
+				90483A261AB6A9B900E62E60 /* pen-but.png in Resources */,
+				90483A381AB6A9B900E62E60 /* square-but@2x.png in Resources */,
+				904839951AB6A9B900E62E60 /* done-but.png in Resources */,
+				90483A281AB6A9B900E62E60 /* pen-but@2x.png in Resources */,
+				904839B81AB6A9B900E62E60 /* LazyPDF-Print.png in Resources */,
+				904839B61AB6A9B900E62E60 /* LazyPDF-Mark-Y@2x.png in Resources */,
+				904839AE1AB6A9B900E62E60 /* LazyPDF-Export@2x.png in Resources */,
+				904839A21AB6A9B900E62E60 /* LazyPDF-Button-H@2x.png in Resources */,
+				90483A3A1AB6A9B900E62E60 /* squarefill-but.png in Resources */,
+				90483A341AB6A9B900E62E60 /* redo-but@2x.png in Resources */,
+				904839BA1AB6A9B900E62E60 /* LazyPDF-Print@2x.png in Resources */,
+				90483A2A1AB6A9B900E62E60 /* Pen-Button-Y.png in Resources */,
+				904839AC1AB6A9B900E62E60 /* LazyPDF-Export.png in Resources */,
+				90483A2E1AB6A9B900E62E60 /* Pen-Button.png in Resources */,
+				90483A4D1AB6A9B900E62E60 /* undo-but@2x.png in Resources */,
+				9048398F1AB6A9B900E62E60 /* Default-568h@2x.png in Resources */,
+				9048399B1AB6A9B900E62E60 /* eraser-but@2x.png in Resources */,
+				904839A81AB6A9B900E62E60 /* LazyPDF-Email.png in Resources */,
+				904839891AB6A9B900E62E60 /* circlefill-but@2x.png in Resources */,
+				904839A01AB6A9B900E62E60 /* LazyPDF-Button-H.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		904838531AB6A8C600E62E60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90483A3F1AB6A9B900E62E60 /* text-but.png in Resources */,
+				90483A311AB6A9B900E62E60 /* Pen-Button@2x.png in Resources */,
+				904839861AB6A9B900E62E60 /* circle-but@2x.png in Resources */,
+				9048398C1AB6A9B900E62E60 /* clear-but.png in Resources */,
+				904839841AB6A9B900E62E60 /* circle-but.png in Resources */,
+				904839CE1AB6A9B900E62E60 /* LazyPDFColorPickerView.xib in Resources */,
+				904839881AB6A9B900E62E60 /* circlefill-but.png in Resources */,
+				904839B31AB6A9B900E62E60 /* LazyPDF-Mark-N@2x.png in Resources */,
+				9048398E1AB6A9B900E62E60 /* clear-but@2x.png in Resources */,
+				904839A71AB6A9B900E62E60 /* LazyPDF-Button-N@2x.png in Resources */,
+				904839B11AB6A9B900E62E60 /* LazyPDF-Mark-N.png in Resources */,
+				90483A411AB6A9B900E62E60 /* text-but@2x.png in Resources */,
+				90483A3D1AB6A9B900E62E60 /* squarefill-but@2x.png in Resources */,
+				90483A371AB6A9B900E62E60 /* square-but.png in Resources */,
+				904839A51AB6A9B900E62E60 /* LazyPDF-Button-N.png in Resources */,
+				90483A2D1AB6A9B900E62E60 /* Pen-Button-Y@2x.png in Resources */,
+				904839941AB6A9B900E62E60 /* Default-736h@3x.png in Resources */,
+				90483A4C1AB6A9B900E62E60 /* undo-but.png in Resources */,
+				904839BF1AB6A9B900E62E60 /* LazyPDF-Thumbs@2x.png in Resources */,
+				90483A251AB6A9B900E62E60 /* line-but@2x.png in Resources */,
+				904839981AB6A9B900E62E60 /* done-but@2x.png in Resources */,
+				9048399A1AB6A9B900E62E60 /* eraser-but.png in Resources */,
+				904839AB1AB6A9B900E62E60 /* LazyPDF-Email@2x.png in Resources */,
+				904839B51AB6A9B900E62E60 /* LazyPDF-Mark-Y.png in Resources */,
+				90483A231AB6A9B900E62E60 /* line-but.png in Resources */,
+				904839921AB6A9B900E62E60 /* Default-667h@2x.png in Resources */,
+				904839BD1AB6A9B900E62E60 /* LazyPDF-Thumbs.png in Resources */,
+				90483A331AB6A9B900E62E60 /* redo-but.png in Resources */,
+				90483A271AB6A9B900E62E60 /* pen-but.png in Resources */,
+				90483A391AB6A9B900E62E60 /* square-but@2x.png in Resources */,
+				904839961AB6A9B900E62E60 /* done-but.png in Resources */,
+				90483A291AB6A9B900E62E60 /* pen-but@2x.png in Resources */,
+				904839B91AB6A9B900E62E60 /* LazyPDF-Print.png in Resources */,
+				904839B71AB6A9B900E62E60 /* LazyPDF-Mark-Y@2x.png in Resources */,
+				904839AF1AB6A9B900E62E60 /* LazyPDF-Export@2x.png in Resources */,
+				904839A31AB6A9B900E62E60 /* LazyPDF-Button-H@2x.png in Resources */,
+				90483A3B1AB6A9B900E62E60 /* squarefill-but.png in Resources */,
+				90483A351AB6A9B900E62E60 /* redo-but@2x.png in Resources */,
+				904839BB1AB6A9B900E62E60 /* LazyPDF-Print@2x.png in Resources */,
+				90483A2B1AB6A9B900E62E60 /* Pen-Button-Y.png in Resources */,
+				904839AD1AB6A9B900E62E60 /* LazyPDF-Export.png in Resources */,
+				90483A2F1AB6A9B900E62E60 /* Pen-Button.png in Resources */,
+				90483A4E1AB6A9B900E62E60 /* undo-but@2x.png in Resources */,
+				904839901AB6A9B900E62E60 /* Default-568h@2x.png in Resources */,
+				9048399C1AB6A9B900E62E60 /* eraser-but@2x.png in Resources */,
+				904839A91AB6A9B900E62E60 /* LazyPDF-Email.png in Resources */,
+				9048398A1AB6A9B900E62E60 /* circlefill-but@2x.png in Resources */,
+				904839A11AB6A9B900E62E60 /* LazyPDF-Button-H.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90D421451AC3945C00D3CE2A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"${PROJECT_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${PROJECT_NAME}\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n# Step 3. Copy Swift modules (from iphonesimulator build) to the copied framework directory\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/Framework.swiftmodule/.\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/Framework.swiftmodule\"\n\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${PROJECT_DIR}\"\n\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		904838451AB6A8C600E62E60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90483A021AB6A9B900E62E60 /* LazyPDFPropertyController.m in Sources */,
+				90483A431AB6A9B900E62E60 /* ThumbsMainToolbar.m in Sources */,
+				904839D91AB6A9B900E62E60 /* LazyPDFContentTile.m in Sources */,
+				904839F71AB6A9B900E62E60 /* LazyPDFMainToolbar.m in Sources */,
+				90483A111AB6A9B900E62E60 /* LazyPDFThumbRender.m in Sources */,
+				904839C81AB6A9B900E62E60 /* LazyPDFColorPickerController.m in Sources */,
+				904839D61AB6A9B900E62E60 /* LazyPDFContentPage.m in Sources */,
+				9048397D1AB6A9B900E62E60 /* Annotation.m in Sources */,
+				904839CB1AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.m in Sources */,
+				904839811AB6A9B900E62E60 /* CGPDFDocument.m in Sources */,
+				904839C11AB6A9B900E62E60 /* LazyPDFColorBarPicker.m in Sources */,
+				90483A491AB6A9B900E62E60 /* UIXToolbarView.m in Sources */,
+				904839E81AB6A9B900E62E60 /* LazyPDFDrawingTools.m in Sources */,
+				90483A0B1AB6A9B900E62E60 /* LazyPDFThumbFetch.m in Sources */,
+				904839DC1AB6A9B900E62E60 /* LazyPDFContentView.m in Sources */,
+				904839DF1AB6A9B900E62E60 /* LazyPDFDataManager.m in Sources */,
+				904839D31AB6A9B900E62E60 /* LazyPDFConstants.m in Sources */,
+				904839FC1AB6A9B900E62E60 /* LazyPDFPopoverController.m in Sources */,
+				904839D01AB6A9B900E62E60 /* LazyPDFColorSquarePicker.m in Sources */,
+				90483A1D1AB6A9B900E62E60 /* LazyPDFTouchView.m in Sources */,
+				90483A1A1AB6A9B900E62E60 /* LazyPDFThumbView.m in Sources */,
+				904839F41AB6A9B900E62E60 /* LazyPDFMainPagebar.m in Sources */,
+				90483A201AB6A9B900E62E60 /* LazyPDFViewController.m in Sources */,
+				904839FF1AB6A9B900E62E60 /* LazyPDFPopoverView.m in Sources */,
+				904839EE1AB6A9B900E62E60 /* LazyPDFDrawToolbar.m in Sources */,
+				90483A0E1AB6A9B900E62E60 /* LazyPDFThumbQueue.m in Sources */,
+				904839E51AB6A9B900E62E60 /* LazyPDFDocumentOutline.m in Sources */,
+				90483A171AB6A9B900E62E60 /* LazyPDFThumbsView.m in Sources */,
+				90483A461AB6A9B900E62E60 /* ThumbsViewController.m in Sources */,
+				904839E21AB6A9B900E62E60 /* LazyPDFDocument.m in Sources */,
+				90483A051AB6A9B900E62E60 /* LazyPDFSourceColorView.m in Sources */,
+				904839C41AB6A9B900E62E60 /* LazyPDFColorIndicatorView.m in Sources */,
+				90483A141AB6A9B900E62E60 /* LazyPDFThumbRequest.m in Sources */,
+				90483A081AB6A9B900E62E60 /* LazyPDFThumbCache.m in Sources */,
+				904839EB1AB6A9B900E62E60 /* LazyPDFDrawingView.m in Sources */,
+				904839F11AB6A9B900E62E60 /* LazyPDFHSBSupport.m in Sources */,
+				904839F91AB6A9B900E62E60 /* LazyPDFModel.xcdatamodeld in Sources */,
+				9048399E1AB6A9B900E62E60 /* File.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		904838511AB6A8C600E62E60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				904839E01AB6A9B900E62E60 /* LazyPDFDataManager.m in Sources */,
+				90483A181AB6A9B900E62E60 /* LazyPDFThumbsView.m in Sources */,
+				904839D41AB6A9B900E62E60 /* LazyPDFConstants.m in Sources */,
+				90483A121AB6A9B900E62E60 /* LazyPDFThumbRender.m in Sources */,
+				904839EF1AB6A9B900E62E60 /* LazyPDFDrawToolbar.m in Sources */,
+				904839C21AB6A9B900E62E60 /* LazyPDFColorBarPicker.m in Sources */,
+				904839F51AB6A9B900E62E60 /* LazyPDFMainPagebar.m in Sources */,
+				904839DA1AB6A9B900E62E60 /* LazyPDFContentTile.m in Sources */,
+				90483A4A1AB6A9B900E62E60 /* UIXToolbarView.m in Sources */,
+				904839FD1AB6A9B900E62E60 /* LazyPDFPopoverController.m in Sources */,
+				90483A001AB6A9B900E62E60 /* LazyPDFPopoverView.m in Sources */,
+				904839D71AB6A9B900E62E60 /* LazyPDFContentPage.m in Sources */,
+				9048397E1AB6A9B900E62E60 /* Annotation.m in Sources */,
+				90483A061AB6A9B900E62E60 /* LazyPDFSourceColorView.m in Sources */,
+				90483A1E1AB6A9B900E62E60 /* LazyPDFTouchView.m in Sources */,
+				90483A0F1AB6A9B900E62E60 /* LazyPDFThumbQueue.m in Sources */,
+				9048399F1AB6A9B900E62E60 /* File.m in Sources */,
+				904839F81AB6A9B900E62E60 /* LazyPDFMainToolbar.m in Sources */,
+				904839E91AB6A9B900E62E60 /* LazyPDFDrawingTools.m in Sources */,
+				904839C51AB6A9B900E62E60 /* LazyPDFColorIndicatorView.m in Sources */,
+				90483A1B1AB6A9B900E62E60 /* LazyPDFThumbView.m in Sources */,
+				904839C91AB6A9B900E62E60 /* LazyPDFColorPickerController.m in Sources */,
+				90483A091AB6A9B900E62E60 /* LazyPDFThumbCache.m in Sources */,
+				90483A151AB6A9B900E62E60 /* LazyPDFThumbRequest.m in Sources */,
+				90483A211AB6A9B900E62E60 /* LazyPDFViewController.m in Sources */,
+				9048385D1AB6A8C600E62E60 /* LazyPDFKitTests.m in Sources */,
+				904839CC1AB6A9B900E62E60 /* LazyPDFColorPickerNavigationController.m in Sources */,
+				90483A031AB6A9B900E62E60 /* LazyPDFPropertyController.m in Sources */,
+				904839EC1AB6A9B900E62E60 /* LazyPDFDrawingView.m in Sources */,
+				904839D11AB6A9B900E62E60 /* LazyPDFColorSquarePicker.m in Sources */,
+				90483A471AB6A9B900E62E60 /* ThumbsViewController.m in Sources */,
+				90483A0C1AB6A9B900E62E60 /* LazyPDFThumbFetch.m in Sources */,
+				90483A441AB6A9B900E62E60 /* ThumbsMainToolbar.m in Sources */,
+				904839FA1AB6A9B900E62E60 /* LazyPDFModel.xcdatamodeld in Sources */,
+				904839E61AB6A9B900E62E60 /* LazyPDFDocumentOutline.m in Sources */,
+				904839DD1AB6A9B900E62E60 /* LazyPDFContentView.m in Sources */,
+				904839821AB6A9B900E62E60 /* CGPDFDocument.m in Sources */,
+				904839F21AB6A9B900E62E60 /* LazyPDFHSBSupport.m in Sources */,
+				904839E31AB6A9B900E62E60 /* LazyPDFDocument.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		904838581AB6A8C600E62E60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 904838491AB6A8C600E62E60 /* LazyPDFKit */;
+			targetProxy = 904838571AB6A8C600E62E60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9048385E1AB6A8C600E62E60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9048385F1AB6A8C600E62E60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		904838611AB6A8C600E62E60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LazyPDFKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		904838621AB6A8C600E62E60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LazyPDFKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		904838641AB6A8C600E62E60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LazyPDFKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		904838651AB6A8C600E62E60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LazyPDFKitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		90D421421AC3943800D3CE2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		90D421431AC3943800D3CE2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		904838441AB6A8C600E62E60 /* Build configuration list for PBXProject "LazyPDFKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9048385E1AB6A8C600E62E60 /* Debug */,
+				9048385F1AB6A8C600E62E60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		904838601AB6A8C600E62E60 /* Build configuration list for PBXNativeTarget "LazyPDFKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				904838611AB6A8C600E62E60 /* Debug */,
+				904838621AB6A8C600E62E60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		904838631AB6A8C600E62E60 /* Build configuration list for PBXNativeTarget "LazyPDFKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				904838641AB6A8C600E62E60 /* Debug */,
+				904838651AB6A8C600E62E60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90D421441AC3943800D3CE2A /* Build configuration list for PBXAggregateTarget "LazyPDFKitFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D421421AC3943800D3CE2A /* Debug */,
+				90D421431AC3943800D3CE2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		904839481AB6A9B900E62E60 /* LazyPDFModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				904839491AB6A9B900E62E60 /* LazyPDFModel.xcdatamodel */,
+			);
+			currentVersion = 904839491AB6A9B900E62E60 /* LazyPDFModel.xcdatamodel */;
+			path = LazyPDFModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 904838411AB6A8C600E62E60 /* Project object */;
+}
